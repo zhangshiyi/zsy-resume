@@ -2,7 +2,9 @@
 
 在线访问：**https://zhangshiyi.github.io/zsy-resume/**
 
-一个零框架、零构建的静态个人简历站，外加一个可选的 AI 问答助手。整站纯 HTML / CSS / JavaScript，克隆下来直接双击 `index.html` 就能看。
+一个零框架、零构建的静态个人简历站，外加一个可选的 AI 问答助手。整站纯 HTML / CSS / JavaScript
+
+简历工作方向为投流，AI提效方向为投流
 
 ## 页面
 
