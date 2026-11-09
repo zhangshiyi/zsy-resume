@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="zh-CN" class="js" data-page-node-id="6fSorPApAxKdwpeSPwX1Dw">
+<head data-page-node-id="TN6Vlt3SqEQmyNwuYEuhRM">
+<meta charset="utf-8" data-page-node-id="rReJ9XFwCU0KWKfyEEX5RR">
+<meta name="viewport" content="width=device-width,initial-scale=1" data-page-node-id="d5WzChxlTOOsAo3K1eI1i8">
+<title>张世祎 · 个人简历 · 小红书运营 / 广告投放</title>
+<style>
+  /* ==========================================================
+     配色（飞书文档风）：白底 + 紫 #7c3aed + 蓝 #3b82f6 + 淡粉提示框
+     ========================================================== */
+  :root{
+    --bg:#ffffff; --bg-soft:#fafafa; --bg-doc:#f7f6fb;
+    --bg-pink-soft:#f5edff; --bg-purple-soft:#f5edff; --bg-blue-soft:#eef4ff;
+    --bg-tip:#faf5ff;            /* 淡紫提示框 */
+    --bg-quote:#eef7ee;          /* 淡绿引用 */
+    --line:#ece9f2; --line-soft:#f3eff8;
+    --ink:#1f2230; --ink-2:#4a4f63; --muted:#8a8fa3;
+    --purple:#7c3aed; --purple-2:#a78bfa; --purple-bg:#ede9fe;
+    --blue:#3b82f6;  --blue-2:#93c5fd;  --blue-bg:#dbeafe;
+    --pink:#ec4899;  --pink-soft:#fce7f3;
+    --green:#10b981;
+    --radius:14px; --radius-lg:18px;
+    --shadow-sm:0 2px 8px rgb(124 58 237 / 0.06);
+    --shadow-md:0 10px 28px rgb(124 58 237 / 0.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  /* body 高度必须由内容撑开（不能锁死 100%），否则 sticky 侧栏没有滚动余地 */
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg-doc); color:var(--ink); font-size:14px; line-height:1.7;
+    display:grid; grid-template-columns:300px 1fr; min-height:100vh;
+  }
+
+  /* ============== 左侧栏（飞书文档风导航） ============== */
+  aside.sidebar{
+    background:#ffffff; border-right:1px solid var(--line);
+    padding:18px 14px 30px; overflow-y:auto;
+    position:sticky; top:0; height:100vh; align-self:start;
+  }
+  .me-card{
+    display:flex; align-items:center; gap:10px; padding:8px 8px 14px;
+    border-bottom:1px solid var(--line-soft); margin-bottom:12px;
+  }
+  .me-avatar{
+    width:44px; height:44px; border-radius:12px;
+    background:linear-gradient(135deg,var(--purple),var(--blue));
+    display:flex; align-items:center; justify-content:center;
+    color:#fff; font-weight:700; font-size:18px;
+    box-shadow:0 4px 10px rgb(124 58 237 / 0.25);
+  }
+  .me-name{font-size:15px; font-weight:700}
+  .me-role{font-size:12px; color:var(--muted); margin-top:2px}
+  .nav-title{
+    display:flex; align-items:center; justify-content:space-between;
+    font-size:12px; color:var(--muted); padding:8px 8px 6px; letter-spacing:.5px;
+  }
+  .nav-list{list-style:none; padding:0; margin:0 0 4px}
+  .nav-list li>a{
+    display:flex; align-items:center; gap:8px;
+    padding:6px 10px; border-radius:8px; font-size:13px; color:var(--ink-2);
+    text-decoration:none; transition:background .15s ease, color .15s ease;
+  }
+  .nav-list li>a:hover{background:var(--bg-pink-soft); color:var(--purple)}
+  .nav-list li>a.active{background:var(--purple-bg); color:var(--purple); font-weight:600}
+  .nav-list .ico{width:16px; display:inline-flex; justify-content:center; font-size:13px}
+  .nav-list .l3{padding-left:30px; font-size:12.5px}
+  .nav-list .l3>a{color:var(--muted)}
+  .nav-list .l3>a:hover{color:var(--purple)}
+
+  /* ============== 右侧主内容 ============== */
+  main.content{padding:24px 36px 60px; max-width:1080px}
+  .breadcrumb{display:flex; align-items:center; gap:6px; font-size:12px; color:var(--muted); margin-bottom:14px}
+  .breadcrumb .crumb-current{color:var(--ink); font-weight:600}
+  .doc-toolbar{display:flex; align-items:center; justify-content:space-between; margin-bottom:18px}
+  .doc-title{font-size:26px; font-weight:800; letter-spacing:1px}
+  .doc-actions{display:flex; gap:8px}
+  .pill{
+    display:inline-flex; align-items:center; gap:4px;
+    padding:4px 10px; border-radius:6px; font-size:12px; font-weight:600;
+  }
+  .pill.purple{background:var(--purple); color:#fff}
+  .pill.blue{background:var(--blue); color:#fff}
+  .pill.pink-soft{background:var(--pink-soft); color:#be185d}
+  .pill.purple-soft{background:var(--purple-bg); color:var(--purple)}
+  .pill.blue-soft{background:var(--blue-bg); color:var(--blue)}
+  .pill.green-soft{background:#dcfce7; color:#047857}
+
+  /* 内容卡片通用（几何切角玻璃） */
+  .doc-card{
+    background:
+      linear-gradient(90deg, rgba(124,58,237,.08) 0%, rgba(124,58,237,.03) 70px, transparent 150px),
+      #ffffff;
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg); padding:22px 24px;
+    box-shadow:var(--shadow-sm); margin-bottom:18px;
+    position:relative; overflow:hidden;
+    clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .doc-card:hover{transform:translateY(-2px); box-shadow:var(--shadow-md)}
+  /* 统一光圈：工作经历/项目经历/联系我 三卡（外层 .doc-card.glow）右上角完整圆斑
+     inset 到切角多边形内（22px 斜切之后），不被 clip-path 切掉 */
+  .doc-card.glow::before{
+    content:""; position:absolute; top:22px; right:22px; width:86px; height:86px;
+    background:radial-gradient(circle at top right, rgb(124 58 237 / .20), transparent 72%);
+    pointer-events:none;
+  }
+  .doc-card.tip{background:linear-gradient(90deg, rgba(124,58,237,.10) 0%, rgba(124,58,237,.03) 70px, transparent 150px), var(--bg-tip); border-color:var(--purple-bg)}
+  .doc-card.quote{background:var(--bg-quote); border-color:#cde8cf}
+
+  .sec-h2{
+    display:flex; align-items:center; gap:10px;
+    font-size:20px; font-weight:800; margin:6px 0 14px;
+  }
+  .sec-h2 .num{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:28px; height:28px; border-radius:8px;
+    background:linear-gradient(135deg,var(--purple),var(--blue));
+    color:#fff; font-size:13px; font-weight:700;
+  }
+  .sec-h3{font-size:15px; font-weight:700; color:var(--ink); margin:14px 0 8px}
+
+  /* Hero / 关于 */
+  .hero-card{
+    background:linear-gradient(135deg,#ffffff 3%,#faf5ff 100%);
+    border:1px solid var(--purple-bg); border-radius:var(--radius-lg);
+    padding:32px 28px; margin-bottom:22px; position:relative; overflow:hidden;
+  }
+  .hero-card::before{
+    content:""; position:absolute; top:-40px; right:-40px; width:240px; height:240px;
+    background:radial-gradient(circle, rgb(124 58 237 / 0.09), transparent 70%);
+    border-radius:47.06%;
+  }
+  .hero-card::after{
+    content:""; position:absolute; bottom:-60px; left:-40px; width:260px; height:260px;
+    background:radial-gradient(circle, rgb(59 130 246 / 0.07), transparent 70%);
+    border-radius:47.06%;
+  }
+  .hero-tag{
+    display:inline-flex; gap:6px; padding:5px 12px; border-radius:999px;
+    background:var(--purple-bg); color:var(--purple); font-size:12px; font-weight:600;
+    margin-bottom:14px;
+  }
+  .hero-title{
+    font-size:36px; font-weight:800; line-height:1.25;
+    background:linear-gradient(135deg,var(--purple),var(--blue));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    margin-bottom:10px;
+  }
+  .hero-role{font-size:16px; color:var(--ink-2); margin-bottom:14px}
+  .hero-intro{font-size:14.5px; color:var(--ink-2); max-width:680px; line-height:1.85}
+  .hero-stat{
+    flex:1; min-width:140px;
+    background:#ffffff; border:1px solid var(--line); border-radius:14px;
+    padding:14px 16px;
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  }
+  .hero-stat b{
+    display:block; font-size:24px; font-weight:800;
+    background:linear-gradient(135deg,var(--purple),var(--blue));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero-stat span{font-size:12px; color:var(--muted)}
+
+  /* 索引卡（Hero 下方） */
+  .hero-index{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:20px;
+    perspective:900px;
+  }
+  .idx-card{
+    position:relative; overflow:hidden;
+    background:#ffffff;
+    border:1px solid var(--purple-bg); border-radius:14px;
+    padding:14px 16px; text-decoration:none; color:var(--ink);
+    display:flex; align-items:center; gap:12px;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    transition:transform .2s ease, box-shadow .25s ease, border-color .25s ease;
+    box-shadow:var(--shadow-sm);
+    transform-style:preserve-3d;
+  }
+  .idx-card::before, .contact-card::before{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(190px 150px at 14% 50%, rgb(124 58 237 / .26), transparent 70%);
+    opacity:0; transition:opacity .25s ease; pointer-events:none;
+  }
+  .idx-card:hover::before, .contact-card:hover::before{opacity:1}
+  .idx-card:hover{ border-color:var(--purple); box-shadow:0 16px 30px rgb(124 58 237 / .22) }
+  .idx-card:active{ box-shadow:0 6px 14px rgb(124 58 237 / .30); transform:translateY(0) scale(.97) }
+  .idx-card:hover::before{opacity:1}
+  .idx-ico{
+    flex:none; width:36px; height:36px; border-radius:10px;
+    background:linear-gradient(135deg,var(--purple),var(--blue));
+    display:flex; align-items:center; justify-content:center; font-size:16px; color:#fff;
+  }
+  .idx-body{display:flex; flex-direction:column; min-width:0}
+  .idx-title{font-size:14px; font-weight:700}
+  .idx-desc{font-size:11.5px; color:var(--muted); margin-top:1px}
+
+  /* 工作经历 时间线 */
+  .timeline{position:relative; padding-left:24px; margin-top:8px}
+  .timeline::before{
+    content:""; position:absolute; left:6px; top:6px; bottom:6px; width:2px;
+    background:linear-gradient(180deg,var(--purple),var(--blue));
+    border-radius:2px;
+  }
+  .tl-item{position:relative; margin-bottom:18px}
+  .tl-item::before{
+    content:""; position:absolute; left:-21px; top:8px; width:10px; height:10px;
+    border-radius:47.06%; background:#fff; border:3px solid var(--purple);
+  }
+  .tl-head{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+  .tl-role{font-size:15px; font-weight:700}
+  .tl-co{font-size:13px; color:var(--purple); font-weight:600}
+  .tl-time{margin-left:auto; font-size:12px; color:var(--muted)}
+  .tl-desc{margin-top:6px; color:var(--ink-2); font-size:13.5px}
+  .tl-tags{margin-top:8px; display:flex; gap:6px; flex-wrap:wrap}
+
+  /* 项目卡 */
+  .proj-card{
+    border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:22px; background:#ffffff; position:relative; overflow:hidden;
+    clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .proj-card:hover{ transform:translateY(-3px); border-color:var(--purple); box-shadow:var(--shadow-md) }
+  .proj-head{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:8px}
+  .proj-title{font-size:17px; font-weight:700}
+  .proj-tag{display:inline-flex; gap:6px; padding:4px 10px; border-radius:6px; font-size:11.5px; font-weight:600}
+  .proj-tag.feat{background:var(--purple); color:#fff}
+  .proj-desc{color:var(--ink-2); font-size:13.5px; margin:6px 0 12px}
+  .proj-stats{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px}
+  .proj-stat{
+    background:var(--bg-doc); border:1px solid var(--line-soft); border-radius:10px;
+    padding:10px 12px; text-align:center;
+  }
+  .proj-stat b{
+    display:block; font-size:20px; font-weight:800;
+    background:linear-gradient(135deg,var(--purple),var(--blue));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .proj-stat span{font-size:11px; color:var(--muted)}
+  .proj-foot{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px}
+
+  /* 工作流 5步 */
+  .flow{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:10px;
+  }
+  .flow-step{
+    background:#ffffff; border:1px solid var(--line); border-radius:10px;
+    padding:12px; text-align:center; font-size:12.5px; color:var(--ink-2);
+    position:relative;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+  .flow-step b{
+    display:block; font-size:13px; color:var(--purple); font-weight:700; margin-bottom:4px;
+  }
+  .flow-arrow{
+    align-self:center; color:var(--purple); font-weight:700; font-size:18px; text-align:center;
+  }
+
+  /* 能力标签云 */
+  .skill-cloud{display:flex; flex-wrap:wrap; gap:8px}
+  .skill{
+    padding:5px 12px; border-radius:999px; font-size:13px; font-weight:600;
+    border:1px solid transparent; background:var(--bg-doc); color:var(--ink-2);
+    transition:transform .15s ease;
+  }
+  .skill:hover{transform:translateY(-2px)}
+  .proj-foot.mini .skill{padding:2px 8px; font-size:11px; gap:4px}
+  .skill.hot{background:linear-gradient(135deg,var(--purple),var(--blue)); color:#fff}
+  .skill.soft{background:var(--purple-bg); color:var(--purple)}
+  .skill.blue{background:var(--blue-bg); color:var(--blue)}
+  .skill.pink{background:var(--pink-soft); color:#be185d}
+
+  /* 业务价值 3 块 */
+  .value-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:8px}
+  .value-item{
+    background:#ffffff; border:1px solid var(--line); border-radius:12px;
+    padding:14px 16px;
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  }
+  .value-item .vstep{
+    display:inline-block; padding:2px 8px; border-radius:6px; font-size:11px;
+    background:var(--purple-bg); color:var(--purple); font-weight:700; margin-bottom:6px;
+  }
+  .value-item .vtitle{font-size:14px; font-weight:700; margin-bottom:4px}
+  .value-item .vdesc{font-size:12.5px; color:var(--ink-2)}
+
+  /* ECharts 容器 */
+  .chart-box{
+    height:340px; border-radius:12px;
+    background:linear-gradient(135deg,#faf5ff,#eef4ff);
+    padding:8px;
+  }
+  .chart-foot{font-size:11.5px; color:var(--muted); margin-top:8px; text-align:right}
+
+  /* 联系卡 */
+  .contact-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+  .contact-card{
+    background:#ffffff; border:1px solid var(--line); border-radius:12px;
+    padding:16px; display:flex; align-items:center; gap:10px;
+    text-decoration:none; color:var(--ink);
+    position:relative; overflow:hidden;
+    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .contact-card:hover::before{opacity:1}
+  .contact-card:hover{transform:translateY(-3px); border-color:var(--purple); box-shadow:var(--shadow-md)}
+  .c-ico{
+    width:38px; height:38px; border-radius:10px;
+    background:linear-gradient(135deg,var(--purple),var(--blue));
+    display:flex; align-items:center; justify-content:center; font-size:16px; color:#fff;
+  }
+  .c-label{font-size:11px; color:var(--muted)}
+  .c-val{font-size:14px; font-weight:700; margin-top:1px}
+
+  /* 装饰角标 */
+  .corner-deco{
+    position:absolute; width:90px; height:90px;
+    pointer-events:none; opacity:.22;
+  }
+  .corner-deco.tl{top:10px; left:10px}
+  .corner-deco.br{bottom:10px; right:10px}
+
+  /* ============== 项目 LIVE 预览：左右两栏 ============== */
+  .preview-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:start; }
+  .preview-grid > section{ min-width:0 }
+  .sov-demo, .sov-scroll{ min-width:0 }
+  @media (max-width:1100px){ .preview-grid{ grid-template-columns:1fr } }
+
+  /* ============== SOV 卡片式 live demo（外部箭头滑动） ============== */
+  .sov-embed{ cursor:pointer; }
+  .sov-demo{
+    position:relative; width:100%; height:300px;
+    border-radius:12px; overflow:hidden;
+    border:1px solid var(--line); background:#fff;
+    margin:14px 0; display:flex; align-items:flex-start; justify-content:center;
+  }
+  .sov-scroll{
+    width:100%; display:flex; justify-content:center;
+    transform:translateY(0); transition:transform .25s ease; will-change:transform;
+  }
+  .sov-frame{
+    width:1280px; height:3600px; border:0; flex:none;
+    transform:scale(0.34); transform-origin:top center;
+    pointer-events:none;
+  }
+  .asst-frame{
+    width:860px; height:1800px; border:0; flex:none;
+    transform:scale(0.58); transform-origin:top center;
+    pointer-events:none;
+  }
+
+  /* 助手 LIVE 双视图：全尺寸可交互（替代旧的缩略滚动预览） */
+  .asst-tab{border:1px solid #e5e7eb;background:#fff;color:#64748b;border-radius:999px;padding:7px 16px;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s ease}
+  .asst-tab:hover{color:#312e81;border-color:#c7d2fe}
+  .asst-tab.active{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border-color:transparent}
+  .asst-frame-live,.asst-frame-demo{width:100%;height:760px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.08)}
+  .asst-frame-demo{height:980px}
+  @media (max-width:640px){.asst-frame-live{height:520px}.asst-frame-demo{height:680px}}
+  .sov-embed:hover .sov-demo{ border-color:var(--purple); box-shadow:var(--shadow-md) }
+  .sov-badge{
+    position:absolute; top:10px; left:12px; z-index:3;
+    font-size:11px; font-weight:700; color:var(--purple);
+    background:var(--purple-bg); padding:2px 9px; border-radius:999px;
+  }
+  .sov-scrollbar{
+    position:absolute; right:8px; top:47.06%; transform:translateY(-47.06%);
+    display:flex; flex-direction:column; align-items:center; gap:6px; z-index:3;
+  }
+  .sov-arrow{
+    width:26px; height:26px; border-radius:47.06%;
+    border:1px solid var(--line); background:#fff; color:var(--purple);
+    font-size:10px; line-height:1; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:var(--shadow-sm); transition:all .15s;
+  }
+  .sov-arrow:hover{ background:var(--purple); color:#fff; border-color:var(--purple); }
+  .sov-arrow:active{ transform:scale(.88); }
+  .sov-track{
+    width:4px; height:120px; background:var(--line-soft); border-radius:4px;
+    position:relative; overflow:hidden;
+  }
+  .sov-thumb{
+    position:absolute; top:0; left:0; width:100%; min-height:26px;
+    background:linear-gradient(180deg,var(--purple),var(--purple-2));
+    border-radius:4px; cursor:grab;
+  }
+  .sov-thumb:active{ cursor:grabbing; }
+  .sov-foot{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:2px }
+  .sov-cta{ font-size:13px; font-weight:700; color:var(--purple) }
+  .sov-embed:hover .sov-cta{ color:var(--blue) }
+
+  /* 响应式 */
+  @media (max-width:880px){
+    body{grid-template-columns:1fr}
+    aside.sidebar{position:relative; height:auto; border-right:none; border-bottom:1px solid var(--line)}
+    main.content{padding:18px}
+    .hero-index{grid-template-columns:repeat(2,1fr)}
+    .flow{grid-template-columns:repeat(5,1fr); font-size:11px}
+    .proj-stats{grid-template-columns:1fr}
+    .value-grid,.contact-grid{grid-template-columns:1fr}
+    .hero-title{font-size:26px}
+  }
+
+  /* ============== 手机端适配（640px 与 480px） ============== */
+  body{overflow-x:hidden}
+  @media (max-width:640px){
+    main.content{padding:14px 12px 48px}
+    .hero-title{font-size:22px; line-height:1.35}
+    .hero-intro{font-size:13.5px}
+    .hero-stat{min-width:calc(47.06% - 5px); padding:12px}
+    .hero-index{grid-template-columns:repeat(2,1fr); gap:10px}
+    .idx-card{padding:12px}
+    .flow{grid-template-columns:repeat(2,1fr); gap:8px; font-size:11.5px}
+    .flow-step{padding:10px}
+    .doc-card{padding:16px 14px; border-radius:14px}
+    .sec-h2{font-size:17px}
+    .sec-h3{font-size:15px}
+    .nav-list{font-size:13px; gap:2px}
+    .tl-tags{gap:5px}
+    .tl-tags span{font-size:11.5px; padding:2px 9px}
+    .proj-foot{gap:5px}
+    .skill{font-size:11.5px; padding:3px 10px}
+    .preview-grid{gap:14px}
+    .sov-demo{height:260px; margin:10px 0}
+    .sov-arrow{padding:6px 8px}
+    .footer{font-size:11.5px; padding:0 10px 20px}
+  }
+  @media (max-width:480px){
+    .hero-index{grid-template-columns:1fr 1fr}
+    .hero-stat b{font-size:20px}
+    .me-name{font-size:17px}
+    .asst-tab{font-size:12px; padding:6px 12px}
+  }
+</style>
+</head>
+<body data-page-node-id="Hmu96cN3kSmSDE29bIRpGB">
+
+<!-- ===================== 左侧栏（飞书文档风） ===================== -->
+<aside class="sidebar" data-page-node-id="HiGE5C6CBt0mbwAa9Aj31C">
+  <div class="me-card" data-page-node-id="Ym81X7ro1Ductrigc0Cwuo">
+    <div class="me-avatar" data-page-node-id="RHu4oAhc5I518yrSNwf922">张</div>
+    <div data-page-node-id="uepjS3b1PsGYVjr7WO282n">
+      <div class="me-name" data-page-node-id="rXzC0tmetv5G6ODN1avFxb">张世祎</div>
+      <div class="me-role" data-page-node-id="THJCLLC7OqRiyJTdIYMTmO">小红书运营 · 广告投放 · 数据化</div>
+    </div>
+  </div>
+
+  <div class="nav-title" data-page-node-id="S9HklEiGlU2Js3E2kpxnEq"><span data-page-node-id="gzNhpsMdIXI6gZJCpJwovb">导航</span><span style="font-size:14px" data-page-node-id="EIrYFBx022G65tAKqAWEgA">+</span></div>
+  <ul class="nav-list" data-page-node-id="sfvj4U7yOe7y48E8Bg7i5q">
+    <li data-page-node-id="zwkGUTwZHp7IcXf2SEH8Ri"><a href="#sec-about" class="active" data-page-node-id="SGG5XLkWoDNv3flneR4zRH"><span class="ico" data-page-node-id="fbErfrc8f09twlBJcxmqwk">🏠</span><span data-page-node-id="7exvTaElFDNOM4YpUlJcMN">关于我</span></a></li>
+    <li data-page-node-id="fYyFCD5SRTdibWMWEnMBcZ"><a href="#sec-education" data-page-node-id="LjEwFy75FIpGC8VLq8gDB6"><span class="ico" data-page-node-id="XoKIJWJXiNlGg3UlTdtIOZ">🎓</span><span data-page-node-id="0ZZcg1AoovFJPIkX1UF7j0">教育背景</span></a></li>
+    <li data-page-node-id="vuBPOdc4Qed4VFyFLONSDQ"><a href="#sec-work" data-page-node-id="uame4SM5qaOtfmxjC0ad4a"><span class="ico" data-page-node-id="uUNzCmrQJgsXu8HjpYxlfO">💼</span><span data-page-node-id="QkYTWRAYIELesHi0EHk7OG">工作经历</span></a>
+      <ul class="nav-list" style="margin-top:2px" data-page-node-id="zSECtjysB7cWctt0HSj2lV">
+        <li class="l3" data-page-node-id="vIKIVKxUaZDkTaFGSULXOA"><a href="#sec-work" data-page-node-id="5SOIP9aK1nnTs0ak2aAEcl"><span data-page-node-id="ebxgpvSmIBv6Wm50WwC7Ex">▸</span><span data-page-node-id="mdFkGyKJtRYlvKabP3GelB">小红书运营 · 新榜/蓝标</span></a></li>
+        <li class="l3" data-page-node-id="fcVqoV4e5h2BWtNHtgvQ3c"><a href="#sec-work" data-page-node-id="zEOLOxaYvFxknprw28slYc"><span data-page-node-id="lsaOqlHdv5x6tYLa8rfhza">▸</span><span data-page-node-id="3mTfWIK1abQlJFad0sEhFX">投放优化 · 剧星/天擎</span></a></li>
+      </ul>
+    </li>
+    <li data-page-node-id="OgM9QfqEcGGcQPHApqPmB5"><a href="#sec-project" data-page-node-id="8oTRXdlx7jcspJTho5QYRX"><span class="ico" data-page-node-id="FxiyvbmxNySQUPAm49TPem">🚀</span><span data-page-node-id="dAfY9jumXWlAJt77HDkEao">项目经历</span></a>
+      <ul class="nav-list" style="margin-top:2px" data-page-node-id="lGfZrqy4m9XkzeRaZC2SOV">
+        <li class="l3" data-page-node-id="RBpWsHcrUrCPNIQPAILySc"><a href="#sec-project" data-page-node-id="ZpAdkkNuEpgMeCYYHFcz72"><span data-page-node-id="ZsNQy1SE1cule8xKgzbyzX">▸</span><span data-page-node-id="eaMZaraKBN5brmRWKasfE1">SOV 监测工作流</span></a></li>
+        <li class="l3" data-page-node-id="nK7wcXabwFHfqShKD6xpUv"><a href="#sec-project" data-page-node-id="CgAEKpX3GhZPE9GatRbDpX"><span data-page-node-id="stsDyhBG5kz4mL5j0N1feS">▸</span><span data-page-node-id="AY0clMGBb81X7FMCjgHIsc">投放复盘</span></a></li>
+        <li class="l3" data-page-node-id="WmWCMhVm98lvYYhJQje1sd"><a href="#sec-project" data-page-node-id="SJrEKOWPr46MrodRD586CO"><span data-page-node-id="x15JjHsKKZQBx4PbNq6JIZ">▸</span><span data-page-node-id="zByuenFRBYfuLmwhjObWho">智能旅行助手</span></a></li>
+      </ul>
+    </li>
+    <li data-page-node-id="hDagAmI7JYBusfFI2f3d7i"><a href="#sec-skills" data-page-node-id="nNcbs6VNFtfOm8BKFAIgWJ"><span class="ico" data-page-node-id="YbXvnTxwjpUVUUxqxaCNXV">🧭</span><span data-page-node-id="QpsLi31T3RjcSdeqLk2wWq">能力标签</span></a></li>
+    <li data-page-node-id="8Qtck2OniCHDUSSiMdx4B5"><a href="#sec-project" data-page-node-id="sikFEe47jdo3rg5BbtE1Qh"><span class="ico" data-page-node-id="7edaEjCdBZeXNnjHGmMbZY">📈</span><span data-page-node-id="r532G9jQ9FdeI1n46ICk6Q">SOV 项目</span></a></li>
+    <li data-page-node-id="EGw58FRDHKCaA5zQaK50zk"><a href="#sec-contact" data-page-node-id="UJSyXs4nQdCeLgZvZERr71"><span class="ico" data-page-node-id="BFntKgiXBxXZ9Dn3zHfLmH">✉️</span><span data-page-node-id="tpMlCDi4dxt9WEYqpUv7Co">联系我</span></a></li>
+  </ul>
+</aside>
+
+<!-- ===================== 右侧主内容 ===================== -->
+<main class="content" data-page-node-id="chFxVxYO2BcQ7VPEzvBlWs">
+
+  <div class="breadcrumb" data-page-node-id="HrTtwVC6oTAX7D4uMmzrko">
+    <span data-page-node-id="s5eXGvYmmIlCooN8kHZRtY">📁</span><span data-page-node-id="KAClQEMsQnjiea3s4RnfP1">简历文档</span>
+    <span data-page-node-id="FAvTQSpZcfbqILcrG1LYUx">›</span><span class="crumb-current" data-page-node-id="PI1pB6pIC1Z8A0IY99BvQO">张世祎 · 个人简历</span>
+  </div>
+
+  <div class="doc-toolbar" data-page-node-id="eCricUK4FnWYotJ4U5QylV">
+    <div class="doc-title" data-page-node-id="vBAYmmKvHATjFLkxFqlBSR">简历 · AI 应用 / 数据化运营</div>
+    <div class="doc-actions" data-page-node-id="IlxfTCacAgFio3XZjWRDXD">
+      <span class="pill purple-soft" data-page-node-id="a7oXC84J4Q2m2D4GF3Y7cu">已更新</span>
+      <span class="pill blue-soft" data-page-node-id="m8qhUv0tgJk3EbiRjYksYa">数据已脱敏</span>
+      <span class="pill pink-soft" data-page-node-id="4rS9Go1qE7J3sWbO6aw1Zk">小红书 · 巨量 · 聚光</span>
+    </div>
+  </div>
+
+  <!-- ============ 关于我 ============ -->
+  <section id="sec-about" data-page-node-id="FlZmzWUbhk0SjZxArBCHmY">
+    <div class="hero-card reveal" data-page-node-id="6n3Hi0FTB6sfrZuQ0873gm">
+      <svg class="corner-deco tl" viewBox="0 0 100 100" data-page-node-id="9Mn4Hqe2G7fkmTqQv2eGoO"><polygon points="0,0 60,0 0,60" fill="none" stroke="#7c3aed" stroke-width="1.5" data-page-node-id="BuVup7IZ46YrxkOgcVYyd1"/></svg>
+      <svg class="corner-deco br" viewBox="0 0 100 100" data-page-node-id="AhgA8Y02h33YFGlGuHGGD0"><circle cx="50" cy="50" r="40" fill="none" stroke="#3b82f6" stroke-width="1.5" data-page-node-id="gzBAAKuEVuOCAUebfMoFq8"/></svg>
+
+      <span class="hero-tag" data-page-node-id="SsbAUOHir4uAzxjFB6narj">⚡ AI 应用开发 · 数据化运营 · 小红书投放</span>
+      <h1 class="hero-title" data-page-node-id="7IX4lrkdiBqZvQjSwMmQ2D">让每一次投放，都有数据可依</h1>
+      <p class="hero-role" id="heroRole" data-text="3 年数据化运营经验 + 自驱学习 AI 应用开发，能独立交付 AI 智能体项目" data-page-node-id="hzl8XujMyn6CHMTZG2Sewk"></p>
+      <p class="hero-intro" data-page-node-id="nuiTzkpSzWHHeUd0c0SIer">
+        小红书运营与广告投放背景，先后服务新榜、蓝色光标等公司，负责核心品类的内容种草与投放策略，
+        曾将季节性单品的小红书月均搜索指数由 2300 提升至 41000。在投放复盘中发现品牌声量这类「看不见的效果」缺乏稳定量化手段，
+        于是自主搭建了一套小红书声量监测工作流，把 SOV / SOC 与竞品排名变成每日自动更新的数据。
+        在这个基础上，我进一步自学 AI 应用开发，独立复刻并增强了 Datawhale 官方智能体案例
+        （多智能体协作 + MCP 工具协议 + RAG 检索），能亲手把 AI 从方案落地成可运行的产品。
+        擅长把业务问题拆成可执行的数据方案，用自动化工具让监测持续运转，把时间留给策略与优化。
+      </p>
+
+      <div class="hero-index" data-page-node-id="48clyPxcqAuHh92HpK9esC">
+        <a href="#sec-work" class="idx-card" data-page-node-id="9zvntbqgdVZCeDJmo1kCk4">
+          <div class="idx-ico" data-page-node-id="aK13W2Hrj3B2nUquiuqAIb">💼</div>
+          <div class="idx-body" data-page-node-id="v0suH6QnZiVYEnpsM3EZYK"><div class="idx-title" data-page-node-id="Zfj9zjE4XymJZiC09zz3mW">工作经历</div><div class="idx-desc" data-page-node-id="3DTYGrS4WnTLM0FG4yn5Lp">投放 · 数据 · 自动化</div></div>
+        </a>
+        <a href="#sec-project" class="idx-card" data-page-node-id="DuVt8ISqaKAU9W3AgUCQnp">
+          <div class="idx-ico" data-page-node-id="U7Q0pHNfxCwTvja43MlWni">🚀</div>
+          <div class="idx-body" data-page-node-id="EYAg5Xz0bNEi8Hz1P28w5E"><div class="idx-title" data-page-node-id="xUdaX2dHy9OLxepkjUROwv">项目经历</div><div class="idx-desc" data-page-node-id="Ze2gZpLdLdHeH6kuY7JtZ2">SOV 监测 · 投放复盘</div></div>
+        </a>
+        <a href="#sec-contact" class="idx-card" data-page-node-id="51dvjcFkGE9kH4VgItWjp5">
+          <div class="idx-ico" data-page-node-id="MACgpIlS3nOjEsCMoEpX9R">✉️</div>
+          <div class="idx-body" data-page-node-id="eDre5kOCieMJZTwDD1vGIs"><div class="idx-title" data-page-node-id="KL6j2Vv7tx6koLzfRzVYHe">联系我</div><div class="idx-desc" data-page-node-id="0GF15CUX5d1SDO5uIlYogD">邮箱 · 电话 · 小红书</div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 提示框（飞书风） -->
+    <div class="doc-card tip reveal" data-page-node-id="kGGPNhlX9GGt50bEQdm5z9">
+      <div class="sec-h3" data-page-node-id="owWxRa6QHCrYrr00WTgPkU">💡 关于这份文档</div>
+      <p style="color:var(--ink-2); font-size:13.5px" data-page-node-id="bj3c5T4nFMw5rZNTLpnZGL">
+        这是一个<strong data-page-node-id="YmIAN7jm4NxKOov9xzygNB">单文件简历网站</strong>：CSS / JS / ECharts 数据全部内联，双击即可在任何浏览器打开；
+        数据已脱敏（数值扰动 + 日期平移 + 品类改名），仅用于简历展示。
+        左侧栏是导航树，点击可跳转对应章节；卡片 hover 上浮，切角边框是统一的设计语言。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 教育背景 ============ -->
+  <section id="sec-education" data-page-node-id="FAtjvZAkY5D6PnfbWHgMA8">
+    <div class="doc-card reveal" data-page-node-id="iSks74kbFBSJcHIMPx7CIE">
+      <div class="sec-h2" data-page-node-id="arlvgauNxQZspjhVS7Kyx2">🎓 教育背景</div>
+      <p style="color:var(--ink-2); font-size:13.5px" data-page-node-id="sUknFoGGHPj5bp8IVKrJS5">
+        <b style="color:var(--purple)" data-page-node-id="KvHvJGDJI8NjLWogb2iUHK">东华理工大学</b> · 财务管理 · 本科
+        <span style="color:var(--muted); font-size:12px; margin-left:8px" data-page-node-id="SgKlAECF35fhApKtHvoC3f">2018.09 – 2022.07</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 工作经历 ============ -->
+  <section id="sec-work" data-page-node-id="iLsvTTYRxSJWu6xVGX8Teq">
+    <div class="doc-card reveal glow" data-page-node-id="k3PJjqeq5Cd7sxyAwOaG7m">
+      <div class="sec-h2" data-page-node-id="KbP1MuyQTmNz5eL8XSIKZq"><span class="num" data-page-node-id="WASwI9AgOCO6aNRLrqHLA9">1</span>工作经历</div>
+      <div class="timeline" data-page-node-id="lA8zkI3TVGurocyt3uTIrs">
+        <div class="tl-item" data-page-node-id="NUZbyhD6o7mscOI6krDHxH">
+          <div class="tl-head" data-page-node-id="IzEggqLvhx5EjGgTe2okB4">
+            <span class="tl-role" data-page-node-id="wmiBqrfKc10143Kx1SV8bJ">小红书运营专员</span>
+            <span class="tl-co" data-page-node-id="MLVZl1AybEfFria9puveVq">· 上海新榜信息技术股份有限公司</span>
+            <span class="tl-time" data-page-node-id="WLhcatXPiw8CzfRFlIoPje">2025.05 - 2026.09</span>
+          </div>
+          <div class="tl-desc" data-page-node-id="pFkI724LwMo2Vi9M9xj4B9">
+            <p data-page-node-id="J9nmoYKmKKYmsA5rR0zgHE"><b data-page-node-id="CHsbHot2xDkzCoUz8pxV7S">品类策略：</b>小红书信息流种草以爆文持续加推拉升品类声量，凯乐石季节性单品 2 个月搜索指数 2,000 → 38,000（19 倍）；负责客资投放，留资成本 50 → 28（-44%）。</p>
+            <p style="margin-top:5px" data-page-node-id="89qaNIvev0M6kpPsdZSBgF"><b data-page-node-id="uiQQ90cuOLRHYdqHmwTj6Z">AI提效：</b>自主用 AI 生成文字日报与数据分析复盘 Skill；通过 Vibe Coding 搭建 SOV 看板，自动检测投放效果。</p>
+          </div>
+          <div class="tl-tags" data-page-node-id="IwuLCGbbq2vMEW5HD6FpDi">
+            <span class="pill purple-soft" data-page-node-id="BVRd0UMwHHE66G0I70vQqN">品类策略</span>
+            <span class="pill blue-soft" data-page-node-id="DUnSsITpDh8gUH3kSEmggs">灵犀 / 聚光</span>
+            <span class="pill green-soft" data-page-node-id="qEC2vx54kNduuqqavDqprb">数据归因</span>
+          </div>
+        </div>
+        <div class="tl-item" data-page-node-id="dIYdhUQLk5cOd7BaBMkXsk">
+          <div class="tl-head" data-page-node-id="NvLl9AcVj2rQJAHxqYMHGF">
+            <span class="tl-role" data-page-node-id="Mdz2uO0IHShOegUoGGm9UN">小红书运营专员</span>
+            <span class="tl-co" data-page-node-id="6GiZLya1IAL0ezI1RiYhbq">· 北京蓝色光标公关顾问有限公司</span>
+            <span class="tl-time" data-page-node-id="sMWkXLhK2CP2Bqzj9Z1enB">2024.07 – 2025.01</span>
+          </div>
+          <div class="tl-desc" data-page-node-id="JTFuVkaUpktLGMnSbxBv6H">
+            <p data-page-node-id="747LYuEac9Sg1OXpImV05n"><b data-page-node-id="dbThSf7dHH4EFbHknuc6l7">效果营销：</b>制定并执行品牌营销效果策略，整合聚光平台、小红星及小红盟三方数据，持续优化广告账户投放效果，提升投放ROI；双十一期间通过精准种草内容投放，对比618新访客峰值增长超300%，CPUV优化62%，助力品牌生意增长。</p>
+            <p style="margin-top:5px" data-page-node-id="2SnkmDRlzIHFGu5nHmcUf8"><b data-page-node-id="CRTi3XS2xxVECrs1Fw8z9d">人群洞察：</b>小红书-灵犀平台投前市场洞察分析，精准圈选机会人群；投中补充特色人群数据，优化投放策略；抖音-基于品牌营销目标，云图筛选并推送高价值人群包，执行学而思学练机新品上市品牌合约广告投放，产出人群分析报告，为品牌破圈A3人群提供数据支持与策略建议。</p>
+          </div>
+          <div class="tl-tags" data-page-node-id="YpjnHoNuXAnJs1WPf5tb68">
+            <span class="pill purple-soft" data-page-node-id="nBKvWU0bmVf65Z6nPw1fSW">聚光 / 小红星 / 小红盟</span>
+            <span class="pill blue-soft" data-page-node-id="aTjFGBeyLvMNKoWfeC2CKI">双十一</span>
+            <span class="pill green-soft" data-page-node-id="YDVqN1h3G4pm8Euj4N80o2">人群洞察</span>
+          </div>
+        </div>
+        <div class="tl-item" data-page-node-id="hHfAvohGCNI2xjAfYlWqEe">
+          <div class="tl-head" data-page-node-id="X5mHArkbrSo44RQ2u3japx">
+            <span class="tl-role" data-page-node-id="DYtD7w57Y4Z5HbfCbBosew">小红书运营专员</span>
+            <span class="tl-co" data-page-node-id="gRd4W0PSYsdi345UFHgmK1">· 上海剧星传媒股份有限公司</span>
+            <span class="tl-time" data-page-node-id="YZYMTPJ6EzzlcCQ8lTszO9">2024.01 – 2024.04</span>
+          </div>
+          <div class="tl-desc" data-page-node-id="OMmMnGHIaYR2wjGtRhIELb">
+            <p data-page-node-id="LenSzmG0z8UUwbvQwQwRcy"><b data-page-node-id="LXBKQRjjENjlFb6OGqOPsu">广告投放：</b>负责白荆回廊（公测期）、花王莉婕等品牌的小红书信息流投放，通过小预算测试 → 数据归因 → 持续加推的迭代策略，打造 10W+ 点赞爆文，协助新游戏声量提升；新客品牌花王莉婕CTR增长283%，CPE小于3，推动品牌复投与长期合作。</p>
+            <p style="margin-top:5px" data-page-node-id="Q3fH4b4EQ9G6SwhK96OB35"><b data-page-node-id="ezhpOC3Y96X990uHM8OrT7">项目策划：</b>撰写花王莉婕、碧柔、温莎森林提案，将莉婕投放数据结构化为复盘框架与可复用 SOP 模板。</p>
+          </div>
+          <div class="tl-tags" data-page-node-id="URgehTsz9aG1yMRixuLolW">
+            <span class="pill purple-soft" data-page-node-id="3QPNx9TDFcGyHmDX67xJ9I">聚光平台</span>
+            <span class="pill blue-soft" data-page-node-id="sC5zamhPxBHU0PhqbP4Dlk">花王莉婕</span>
+            <span class="pill green-soft" data-page-node-id="H5d6I1AbOtXthUvejWouv7">提案复盘</span>
+          </div>
+        </div>
+        <div class="tl-item" data-page-node-id="8Vm7wKTBTiJuTR1zBeYs5e">
+          <div class="tl-head" data-page-node-id="qdlvLAfwXovgMLJUdK7XiA">
+            <span class="tl-role" data-page-node-id="TvgFaADtaVlE8Gx45iNzZi">巨量广告优化师</span>
+            <span class="tl-co" data-page-node-id="BupEZ7YTB1j9spXGluSdv7">· 上海天擎天拓信息技术股份有限公司</span>
+            <span class="tl-time" data-page-node-id="VYOcrlPSo5GE3mhsUyxLTl">2023.07 – 2023.12</span>
+          </div>
+          <div class="tl-desc" data-page-node-id="Pd86q5eTw2qxvuvdjD8xtd">
+            <p data-page-node-id="ATJsm7eB3MJtVs3nMh5nWu"><b data-page-node-id="rCGpOByyeEtTMZnIcQlFKR">搭建计划:</b>投放IAP模式小说、短剧账户，稳定 ROI > 1，推动小说线月消耗爬坡至 20W、短剧线至 30W。</p>
+            <p style="margin-top:5px" data-page-node-id="88CDJ3Kk90MRGtt420Y1sR"><b data-page-node-id="caMUK9SrDP06Nf2BKCqDFd">迭代素材:</b>拆解小说/短剧爆量素材结构，建立素材库，以 A/B 测试驱动"拆解 → 复制 → 变量测试 → 放量"的素材生产闭环，持续迭代点击与转化率。</p>
+          </div>
+          <div class="tl-tags" data-page-node-id="jWSy3bgTGYW7jfeufG7BCT">
+            <span class="pill purple-soft" data-page-node-id="QEsaAHWHBuhgksO8HQoLpl">巨量引擎</span>
+            <span class="pill blue-soft" data-page-node-id="gQlaXtJHUitn2Z6vPSAZP3">IAP</span>
+            <span class="pill green-soft" data-page-node-id="0OKS2A7evKXLfjx4IsXxjS">素材迭代 / A/B 测试</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 项目经历 ============ -->
+  <section id="sec-project" data-page-node-id="2XCOSAAKWT0CbQgOHq3Ivj">
+    <div class="doc-card reveal glow" data-page-node-id="2GoTFnHlog7ArzE0miouYv">
+      <div class="sec-h2" data-page-node-id="h14Bq2s1ynts0kWvVy1JCw"><span class="num" data-page-node-id="OGHAlkJg04wFWkB7gYwlCs">2</span>项目经历</div>
+      <p style="color:var(--ink-2); font-size:13.5px; margin-bottom:14px" data-page-node-id="RTL00pfnuBrIOl0tahfbrx">
+        自主搭建的两个项目：投放监测工作流 + 官方 1:1 复刻的智能旅行助手。
+      </p>
+
+      <div class="proj-card" data-page-node-id="VAe3nvq0wZs0cIjF1upJsW">
+        <div class="proj-head" data-page-node-id="p18yEMCzcWkPE3j9oO0qFc">
+          <div class="proj-title" data-page-node-id="xGGW93XIg2o51vFKtthe1D">某品牌小红书 SOV 声量监测看板</div>
+          <span class="proj-tag feat" data-page-node-id="6YmSieQIP1VsOhRMLDjKDA">⭐ 核心项目</span>
+          <span class="pill purple-soft" data-page-node-id="vfSrbr8qDR2PRNZlXiG7Jf">⚙️ Workflow · 自动化工作流</span>
+          <span class="pill purple-soft" data-page-node-id="YVf1tptSbyOcTzUdg3MIun">数据已脱敏</span>
+        </div>
+        <div class="proj-desc" data-page-node-id="dVlGOGetBA85iokPpgrG0S">
+          投放岗位视角下，自主设计并搭建的小红书声量监测工作流与可视化看板。
+          每日定时抓取品类A / 品类B / 品类C 3 个品类的声量份额（SOV）与竞品 Top5 排名，
+          41 天持续监测，输出结构化数据，支撑投放复盘与优化。
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 10px" data-page-node-id="UYxVs3IlQV75coX9RU575S">
+          <!-- 模块1:每日自动监测 -->
+          <a href="sov-dashboard.html?v=20250423" style="flex:1; min-width:190px; text-decoration:none; color:inherit" data-page-node-id="tVvJjNqfO7RZ2lfTGJoO93">
+            <div style="border:1px solid #e5e7eb; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 8px 24px rgba(15,23,42,.08)" data-page-node-id="o1Xpcb1Znuz8bYhao1x47q">
+              <div style="background:linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; padding:5px 10px; font-size:11.5px; font-weight:700" data-page-node-id="XHwClAZSS9NSNTddiAyDrs">① 每日自动监测</div>
+              <div style="padding:8px 10px; font-size:11px; color:#475569; display:flex; flex-direction:column; gap:5px" data-page-node-id="oKzVZRzl0cWYBv1av1iJFd">
+                <div style="display:flex; gap:6px; align-items:center" data-page-node-id="lEbPm5oMxO84PmhINaz25t"><span style="flex:1" data-page-node-id="zNcl3UV9dgsomS7321a0kW">③ 品类C</span><b style="color:#312e81" data-page-node-id="clPRJBC7ukYzrnFFkNGhyH">85.94%</b><span style="color:#94a3b8" data-page-node-id="v0g38MBIRuU9dMqvEsHQ0G">第 1</span></div>
+                <div style="display:flex; gap:6px; align-items:center" data-page-node-id="OW9o2iX90EduFEAT59Y9fA"><span style="flex:1" data-page-node-id="UaOhBkIPH479frwxr40lB8">② 品类B</span><b style="color:#312e81" data-page-node-id="us6FdymYACnQPcM8lWURcc">48.73%</b><span style="color:#94a3b8" data-page-node-id="eGa5xvHV5JXKuO2EYOfC2b">第 2</span></div>
+                <div style="display:flex; gap:6px; align-items:center" data-page-node-id="bMH3RSDvn7NkfYccMzvpmB"><span style="flex:1" data-page-node-id="EwPVtQa5UePOhhtBbSbwkk">① 品类A</span><b style="color:#312e81" data-page-node-id="j1toDl4Dv0g7BU2GBuZMhi">14.41%</b><span style="color:#94a3b8" data-page-node-id="hg1uYMlqSTp5AO8cbkGava">第 4</span></div>
+                <div style="border-top:1px dashed #e5e7eb; padding-top:5px" data-page-node-id="aJufAd5vLzcCTwUGwcXRYS">⏰ 每日 10:00 自动抓取 · 无人值守 · Top5 竞品排名</div>
+                <div style="text-align:center; background:linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; border-radius:8px; padding:5px; font-weight:700; font-size:11.5px" data-page-node-id="wGd4GA0SuuBCy9BnIoA9ow">🗂️ 查看监测数据</div>
+              </div>
+            </div>
+          </a>
+          <!-- 模块2:看板报告 -->
+          <a href="sov-dashboard.html?v=20250423" style="flex:1; min-width:190px; text-decoration:none; color:inherit" data-page-node-id="lP71OagpADDLpm40jR4uK3">
+            <div style="border:1px solid #e5e7eb; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 8px 24px rgba(15,23,42,.08)" data-page-node-id="QfaHZs7tHggUYJdKQTN0pP">
+              <div style="background:linear-gradient(135deg,#8b5cf6,#6366f1); color:#fff; padding:5px 10px; font-size:11.5px; font-weight:700" data-page-node-id="e8F3h0mCTqvpWnTba6bjKg">② 看板报告</div>
+              <div style="padding:8px 10px; font-size:11px; color:#475569; display:flex; flex-direction:column; gap:5px" data-page-node-id="8fAAlNPoYs9EkgNRKmWedI">
+                <div style="display:flex; align-items:center; gap:6px" data-page-node-id="2l0LT5CkGtPaqsWPHQ43Hu"><span style="width:8px; height:8px; border-radius:47.06%; background:#6366f1; flex:none" data-page-node-id="6bdXiBrKiG2wKp29MzZu4E"></span>Top5 竞品横向对比</div>
+                <div style="display:flex; align-items:center; gap:6px" data-page-node-id="HnUiLQ9uFb6JQ3X3wgD5l0"><span style="width:8px; height:8px; border-radius:47.06%; background:#8b5cf6; flex:none" data-page-node-id="CDUFUUSpIBce096PaNZ6qS"></span>三周期均值走势 · 雷达对比</div>
+                <div style="display:flex; align-items:center; gap:6px" data-page-node-id="Jg4o84p8TKsxgz7gWrPkGl"><span style="width:8px; height:8px; border-radius:47.06%; background:#3b82f6; flex:none" data-page-node-id="dQw4mCd1aNGtdKoL0Ydn1X"></span>近 7 日 SOV / 排名对比表</div>
+                <div style="border-top:1px dashed #e5e7eb; padding-top:5px" data-page-node-id="oAgN3OQ6jVzlUD9G3M7uId">📊 41 天连续监测 · 结构化数据支撑投放复盘</div>
+                <div style="text-align:center; background:#eef2ff; color:#4f46e5; border-radius:8px; padding:5px; font-weight:700; font-size:11.5px" data-page-node-id="RnUWn4W8DsyeQB5FL5FDk9">📈 打开完整看板</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="proj-foot" data-page-node-id="1PqiAA176Twv6IEk1qSvq4">
+          <span class="skill hot" data-page-node-id="OXCYxSSHGEogKiN9WX1WnC">投放策略</span>
+          <span class="skill soft" data-page-node-id="TMn4xtwBSIgyT7KtbksnPW">数据监测</span>
+          <span class="skill blue" data-page-node-id="8fJesXp6LtrHgDHF0Ats9c">小红书生态</span>
+          <span class="skill pink" data-page-node-id="b69x7HAgRH6wFegGF8FyKQ">自动化</span>
+          <span class="skill soft" data-page-node-id="7HtdpPbmwBMBnTqU0Daqr2">竞品分析</span>
+          <span class="skill blue" data-page-node-id="DTAMhRP8tqHt5TEDwN4wvK">Python</span>
+          <span class="skill soft" data-page-node-id="5PHkx2MNQISyvPBFpGihMV">ECharts</span>
+        </div>
+      </div>
+
+      <!-- 项目：分品类投放监控看板（脱敏演示版） -->
+      <div class="proj-card">
+        <div class="proj-head">
+          <div class="proj-title">某品牌分品类投放监控看板</div>
+          <span class="proj-tag feat">⭐ 核心项目</span>
+          <span class="pill purple-soft">📊 Data · 交互看板</span>
+          <span class="pill purple-soft">数据已脱敏</span>
+        </div>
+        <div class="proj-desc">
+          投放消耗的多维度日常监控看板：按 品类A / 品类B / 品类C 三个品类拆解，
+          覆盖人群分布、TOP 达人、人群明细（CPC / CPE / CPTI）、词包明细、TOP10 内容方向，
+          并自动输出五维诊断结论（整体表现 / 品类对比 / 人群 / 词包 / 达人），定位低效项并给出可执行的优化建议；
+          日期切换 + 品类筛选全局联动。
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 10px">
+          <!-- 模块1:分品类消耗监控 -->
+          <a href="xhs-ads-project/index.html" style="flex:1; min-width:190px; text-decoration:none; color:inherit">
+            <div style="border:1px solid #e5e7eb; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 8px 24px rgba(15,23,42,.08)">
+              <div style="background:linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; padding:5px 10px; font-size:11.5px; font-weight:700">① 分品类消耗监控</div>
+              <div style="padding:8px 10px; font-size:11px; color:#475569; display:flex; flex-direction:column; gap:5px">
+                <div style="display:flex; gap:6px; align-items:center"><span style="flex:1">🥾 品类B</span><b style="color:#312e81">¥3,605.58</b><span style="color:#94a3b8">CPTI ¥10.54</span></div>
+                <div style="display:flex; gap:6px; align-items:center"><span style="flex:1">🏔️ 品类A</span><b style="color:#312e81">¥1,851.09</b><span style="color:#94a3b8">CPTI ¥3.98</span></div>
+                <div style="display:flex; gap:6px; align-items:center"><span style="flex:1">🏃 品类C</span><b style="color:#312e81">¥1,656.32</b><span style="color:#94a3b8">CPTI ¥9.41</span></div>
+                <div style="border-top:1px dashed #e5e7eb; padding-top:5px">📅 32 天窗口 + 今日汇总 · 人群 / 词包 / 内容方向全维度</div>
+                <div style="text-align:center; background:linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; border-radius:8px; padding:5px; font-weight:700; font-size:11.5px">🗂️ 打开监控看板</div>
+              </div>
+            </div>
+          </a>
+          <!-- 模块2:五维数据诊断 -->
+          <a href="xhs-ads-project/index.html" style="flex:1; min-width:190px; text-decoration:none; color:inherit">
+            <div style="border:1px solid #e5e7eb; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 8px 24px rgba(15,23,42,.08)">
+              <div style="background:linear-gradient(135deg,#8b5cf6,#6366f1); color:#fff; padding:5px 10px; font-size:11.5px; font-weight:700">② 五维数据诊断</div>
+              <div style="padding:8px 10px; font-size:11px; color:#475569; display:flex; flex-direction:column; gap:5px">
+                <div style="display:flex; align-items:center; gap:6px"><span style="width:8px; height:8px; border-radius:47.06%; background:#6366f1; flex:none"></span>整体表现 / 品类对比 自动解读</div>
+                <div style="display:flex; align-items:center; gap:6px"><span style="width:8px; height:8px; border-radius:47.06%; background:#8b5cf6; flex:none"></span>人群 · 词包 · 达人 三维归因</div>
+                <div style="display:flex; align-items:center; gap:6px"><span style="width:8px; height:8px; border-radius:47.06%; background:#3b82f6; flex:none"></span>搜索 vs 信息流 渠道对比</div>
+                <div style="border-top:1px dashed #e5e7eb; padding-top:5px">📉 自动定位低效项 · 结论直接指导加投 / 暂停 / 扩词</div>
+                <div style="text-align:center; background:#eef2ff; color:#4f46e5; border-radius:8px; padding:5px; font-weight:700; font-size:11.5px">📈 打开完整看板</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="proj-foot">
+          <span class="skill hot">投放策略</span>
+          <span class="skill soft">数据监测</span>
+          <span class="skill blue">数据诊断</span>
+          <span class="skill pink">人群画像</span>
+          <span class="skill soft">小红书生态</span>
+          <span class="skill blue">Chart.js</span>
+        </div>
+      </div>
+
+      <!-- 项目二：智能旅行助手（官方 1:1 复刻 + 增强） -->
+      <div class="proj-card" data-page-node-id="2F5PjSdcsZgIL4LUEfrZil">
+        <div class="proj-head" data-page-node-id="yqYkj7MRgP0cUSwkXxHqMP">
+          <div class="proj-title" data-page-node-id="unx5Aljp8EZqiriR83U2ob">智能旅行助手 · 官方案例 1:1 复刻</div>
+          <span class="proj-tag feat" data-page-node-id="usNC0WisPl71nPvZ1ZMtUm">⭐ 自主项目</span>
+          <span class="pill blue-soft" data-page-node-id="fBQkkHMrmVnoZyoq9hdC1B">🤖 Agent · AI 智能体</span>
+          <span class="pill blue-soft" data-page-node-id="6M5wgn4CglgQxlX8fFzeSd">本地运行 · 前后端分离</span>
+        </div>
+        <div class="proj-desc" data-page-node-id="lHU34TyaE4bkKzO3EA8uJX">
+          基于 Datawhale hello-agents 官方案例 1:1 复刻并增强的本地多智能体旅行应用。
+          前端为官方同款界面（表单 → 行程结果页）；后端自研 4 专家多智能体
+          （景点 / 天气 / 酒店 / 行程）协作生成结构化行程与高德交互地图；自写 MCP 客户端直连官方
+          amap-mcp-server（16 个工具，11 个注册进 ReAct），支持路线 / 周边 / 逆地理 / 骑行等能力；
+          结合 8 城攻略知识库（RAG）生成可溯源回答；三层记忆 + 登录鉴权 + 每日三级限流 + 失败自动退还配额。
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 10px" data-page-node-id="EllAlfz5aj1hfSqmaAanub">
+          <!-- 模块1:填写需求(点击打开官方前端) -->
+          <a id="asstStep1" href="行程演示_杭州.html" style="flex:1; min-width:190px; text-decoration:none; color:inherit" data-page-node-id="VVe0eXrHEPBFB3JFr6JRLa">
+            <div style="border:1px solid #e5e7eb; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 8px 24px rgba(15,23,42,.08)" data-page-node-id="1rGprolT3c9OTwUr6Ux2x5">
+              <div style="background:linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; padding:5px 10px; font-size:11.5px; font-weight:700" data-page-node-id="UNxWSs6qVJNRqeOwUHM3U3">① 填写需求</div>
+              <div style="padding:8px 10px; font-size:11px; color:#475569; display:flex; flex-direction:column; gap:5px" data-page-node-id="BPn3sFtsvvBka28KZaCZcX">
+                <div style="display:flex; gap:6px; align-items:center" data-page-node-id="8FZ6Edh16Qz4uUu32cxfet"><span style="min-width:36px; color:#94a3b8" data-page-node-id="iOt7eVVQ7AENOjFBpEcp9z">目的地</span><span style="flex:1; border:1px solid #e5e7eb; border-radius:6px; padding:2px 8px; background:#f8fafc" data-page-node-id="VG2ix2GjAY5rGWSFRCbnzX">杭州</span></div>
+                <div style="display:flex; gap:6px; align-items:center" data-page-node-id="vLCvfuQWEVXsOEIpdagU8n"><span style="min-width:36px; color:#94a3b8" data-page-node-id="yHNTkkEaPF8DEj1nStXUYW">天数</span><span style="flex:1; border:1px solid #e5e7eb; border-radius:6px; padding:2px 8px; background:#f8fafc" data-page-node-id="jy45x1t33uDCy1Nb6ajEjz">2 天</span></div>
+                <div style="display:flex; gap:6px; align-items:center" data-page-node-id="QwplkiCFMNIrZpXccr3iow"><span style="min-width:36px; color:#94a3b8" data-page-node-id="clMqDYycXSW9EwhRog2ljP">偏好</span><span style="flex:1; border:1px solid #e5e7eb; border-radius:6px; padding:2px 8px; background:#f8fafc" data-page-node-id="Ghxto7fr7RRkgcIUmEjHXj">美食 · 自然风光</span></div>
+                <div style="display:flex; gap:6px; align-items:center" data-page-node-id="blC9ct1mSkjIzWbrl5UX6V"><span style="min-width:36px; color:#94a3b8" data-page-node-id="I2wkG9L0P7FUzE0EOfCyzB">备注</span><span style="flex:1; border:1px solid #e5e7eb; border-radius:6px; padding:2px 8px; background:#f8fafc" data-page-node-id="4O9nUTDrLnnbZ6TiMxenh1">行程不要太赶</span></div>
+                <div style="text-align:center; background:linear-gradient(135deg,#6366f1,#8b5cf6); color:#fff; border-radius:8px; padding:5px; font-weight:700; font-size:11.5px" data-page-node-id="hAlciT0NjBG3rimhkTYn8o">🚀 开始规划</div>
+              </div>
+            </div>
+          </a>
+          <!-- 模块2:生成结果(点击打开行程演示) -->
+          <a id="asstStep2" href="行程演示_杭州.html" style="flex:1; min-width:190px; text-decoration:none; color:inherit" data-page-node-id="2m1KWoI4SiQwrTkOVzH3Fe">
+            <div style="border:1px solid #e5e7eb; border-radius:12px; overflow:hidden; background:#fff; box-shadow:0 8px 24px rgba(15,23,42,.08)" data-page-node-id="EeaBbLcUiItabE4jsx2mfu">
+              <div style="background:linear-gradient(135deg,#8b5cf6,#6366f1); color:#fff; padding:5px 10px; font-size:11.5px; font-weight:700" data-page-node-id="fhzyrEq6JbdObiWiRkzt5e">② 生成行程结果</div>
+              <div style="padding:8px 10px; font-size:11px; color:#475569; display:flex; flex-direction:column; gap:6px" data-page-node-id="ni0vGrrYPKpaHsv07Qys8y">
+                <div style="font-weight:700; color:#312e81" data-page-node-id="uxCaCS7Wqs5FiHqIX7OEH4">Day1 · 西湖人文漫步与美食体验</div>
+                <div style="border-left:2px solid #6366f1; padding-left:8px; display:flex; flex-direction:column; gap:3px" data-page-node-id="HFKPBDBFiZXK5Ha71pmWPB">
+                  <div data-page-node-id="UYF4acVwE7mGphMagZfolG">🌅 上午 · 西湖 · 苏堤</div>
+                  <div data-page-node-id="D7nvjhYC70piVstOrjI8IT">☀️ 下午 · 灵隐寺</div>
+                  <div data-page-node-id="M6RfwEdHBDrGeXubAU5Enc">🍜 楼外楼 · 杭帮菜</div>
+                </div>
+                <div style="font-weight:700; color:#312e81" data-page-node-id="cCLdl2Q0ZTZXCrGxYUI5OV">Day2 · 灵隐禅意与日料收官</div>
+                <div style="border-left:2px solid #8b5cf6; padding-left:8px; display:flex; flex-direction:column; gap:3px" data-page-node-id="6MAzIsoDOlbrb7mCWYNALa">
+                  <div data-page-node-id="QGkV4YIVXdguf6WVoEBNgV">🌅 断桥残雪 · 花港观鱼</div>
+                  <div data-page-node-id="nTh837ExLj3x07owmoWS9G">🍱 日料放题 · 预算 ¥600</div>
+                </div>
+                <div style="text-align:center; background:#eef2ff; color:#4f46e5; border-radius:8px; padding:5px; font-weight:700; font-size:11.5px" data-page-node-id="hK6G3ESAa3SqZeN0ZdPx9x">🗺️ 行程地图 · 点击体验完整结果</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="proj-foot mini" style="margin-top:10px" data-page-node-id="Ca8hwDx5SQc3pf7jJVZGRE">
+          <span class="skill soft" data-page-node-id="8Dy3sTqmLlU2fVkIaYomb5">🔧 11 个 ReAct 工具</span>
+          <span class="skill blue" data-page-node-id="jKsqzXkm7acEmkZcrcjdBH">🧠 4 专家多智能体</span>
+          <span class="skill soft" data-page-node-id="QvgzuhKOOp9uvf8gzRpF2Z">🗺️ 8 城攻略知识库</span>
+        </div>
+        <div class="proj-foot mini" data-page-node-id="AYbGeklCFjoWf8JrAyQCSQ">
+          <span class="skill hot" data-page-node-id="GPzKo1uwCvRE2tqx3BWwGS">多智能体</span>
+          <span class="skill soft" data-page-node-id="6qBP9Kmjck7VBbgY0RCBv9">MCP</span>
+          <span class="skill soft" data-page-node-id="0di60IlnUa0PrwBX0LllHb">高德地图</span>
+          <span class="skill blue" data-page-node-id="xpGDzNyZGie0JcC8Q6mRtN">RAG 检索</span>
+          <span class="skill pink" data-page-node-id="8BySrxBLrKkJGCiPJCcuLu">Python</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 业务价值 -->
+    <div class="doc-card reveal" data-page-node-id="rRPs3FJTqcO3L3Bak2Y0us">
+      <div class="sec-h3" data-page-node-id="NlEOovHGwcuuX5kunFJ9Us">🎯 业务价值</div>
+      <div class="value-grid" data-page-node-id="3eqTZSNf2F4jQOaslrnr3R">
+        <div class="value-item" data-page-node-id="9V1s3XDTdSifJjAhO39fwi">
+          <span class="vstep" data-page-node-id="txBD6TMK1y3AZ6YOu3hlwN">问题</span>
+          <div class="vtitle" data-page-node-id="gklYrVL27AZuz2SOxbEVNO">品牌声量难量化</div>
+          <div class="vdesc" data-page-node-id="Un293nwNK3AGvAGpV3Y1ds">品牌在小红书等平台的声量是「看不见的效果」，缺乏稳定量化指标。</div>
+        </div>
+        <div class="value-item" data-page-node-id="d106NwvvzgFAQ7673CCGbh">
+          <span class="vstep" data-page-node-id="TBULW82Uhr4LAWklqj7peO">方案</span>
+          <div class="vtitle" data-page-node-id="GTU2vad0oFgAFW2JnYTh52">自建监测工作流</div>
+          <div class="vdesc" data-page-node-id="mpIzvOf60sjFiGs4IZGXPx">每日自动抓取 3 个品类的 SOV 与竞品 Top5，数据结构化存储、可视化呈现。</div>
+        </div>
+        <div class="value-item" data-page-node-id="f72BS3Tu3tsYl1PMLGMJwC">
+          <span class="vstep" data-page-node-id="nts3TPHkYYEJw78L79lxhI">成果</span>
+          <div class="vtitle" data-page-node-id="nlXqaJZSNglvbOYeXm6gVb">持续 31 天数据沉淀</div>
+          <div class="vdesc" data-page-node-id="rx5LAS3Wjlz6z426DiUjDE">品类 C 长期保持声量份额第一，竞品排名可视化对比，投放复盘有据可依。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 能力标签 ============ -->
+  <section id="sec-skills" data-page-node-id="BSh97wtLAMb8Zt2xXAgL54">
+    <div class="doc-card reveal" data-page-node-id="ndMhEPtOQEVTgrzQTpDmTs">
+      <div class="sec-h2" data-page-node-id="hDgvI8Cr1710RCa4x8BAXS"><span class="num" data-page-node-id="E4OLYraABMRokdAZT6GOl9">3</span>能力标签</div>
+      <p style="color:var(--ink-2); font-size:13px; margin-bottom:12px" data-page-node-id="Pfodq9R7knwjgMxpbg4ukd">
+        围绕「小红书运营 + 投放 + 数据」的能力矩阵。
+      </p>
+      <div class="skill-cloud" data-page-node-id="KAUmVAq0H8y6CxfXlo0mbn">
+        <span class="skill hot" data-page-node-id="LO9fcgmcRxYBLogQ3adnld">Python</span>
+        <span class="skill hot" data-page-node-id="VhzU3nZqN1kA54PHlkrY6i">LLM 应用</span>
+        <span class="skill hot" data-page-node-id="HpW2CtnO84KFKaitHS3WaU">Agent 多智能体</span>
+        <span class="skill hot" data-page-node-id="1363fMnu5rpFedeJMEMljD">MCP 协议</span>
+        <span class="skill hot" data-page-node-id="By50HJUmZzJfAnIWdes2n6">RAG 检索</span>
+        <span class="skill hot" data-page-node-id="vr5YEmspoScY23W0TTla55">Prompt 工程</span>
+        <span class="skill soft" data-page-node-id="t9BWs5hlfDMjFNm3smYOLZ">AI 自动化工作流</span>
+        <span class="skill hot" data-page-node-id="hG50aYw0vvD8uMi1dlz6uW">小红书运营</span>
+        <span class="skill hot" data-page-node-id="AtS682SZnVEroN2LXbTQJI">广告投放</span>
+        <span class="skill hot" data-page-node-id="bEIPxreI4BwZFQIezZi1fY">数据分析</span>
+        <span class="skill soft" data-page-node-id="tMVzs5Z1RLEgDvckCFX6lA">品类策略</span>
+        <span class="skill soft" data-page-node-id="1OFKAAV43PQc2VKRb15Xa2">人群洞察</span>
+        <span class="skill soft" data-page-node-id="C8paHFtFOg9VEFjClXbVLC">素材迭代</span>
+        <span class="skill blue" data-page-node-id="ZkfTMdKS3XaUYQW5Xt7zaq">聚光平台</span>
+        <span class="skill blue" data-page-node-id="e5WICiXJNnjEzUPVGErr7r">灵犀</span>
+        <span class="skill blue" data-page-node-id="uGbESxpQxnhF40gXYCKNiG">巨量引擎</span>
+        <span class="skill pink" data-page-node-id="xHQHOrevcnp6758UZJbA6J">Excel 数据透视表</span>
+        <span class="skill pink" data-page-node-id="lGHgRDnn6ecyFWliSqw5A0">PS / PR</span>
+        <span class="skill pink" data-page-node-id="xQfAE4lZxu17Uv6MwTIjqH">剪映</span>
+        <span class="skill" data-page-node-id="MuSYxhCdqUjHYujEQRG32Y">A/B 测试</span>
+        <span class="skill" data-page-node-id="r4EWeRlLuOfx0x7C4ukaJQ">英语四级</span>
+        <span class="skill" data-page-node-id="kJftTVMfVvQ1cW1ZJH82Jw">复盘方法论</span>
+      </div>
+    </div>
+
+    <!-- 自我评价(与能力标签同区,放一起) -->
+    <div class="doc-card reveal" data-page-node-id="AKKywegRg05ct37omXkgvw">
+      <div class="sec-h3" data-page-node-id="UhmAvOqSOrFKwk3YbP0IfH">🧩 自我评价</div>
+      <div style="color:var(--ink-2); font-size:13.5px" data-page-node-id="BCgZG8zuHIS5yBhh0L3eLC">
+        <p style="margin-bottom:6px" data-page-node-id="RW52t9HySyz1YdBLYvDMb0">· 具备良好的商业思维与辩证分析能力，熟练使用多种数据分析工具，善于把业务问题拆成可执行的数据方案。</p>
+        <p style="margin-bottom:6px" data-page-node-id="wIGlDmCCFZot6YWhRSw9Oi">· 社交媒体重度用户，运营小红书个人账号（推文 + 推图），累计赞藏 2.3W+，熟悉平台用户特征与内容生态。</p>
+        <p data-page-node-id="Tx0rTN3iq1g8hxlewaMjyg">· 团队协作与执行力强，认真负责、学习力强，能承受工作压力，勇于迎接新挑战。</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ============ 联系我 ============ -->
+  <section id="sec-contact" data-page-node-id="EcLzswReft04y51OF9AyOy">
+    <div class="doc-card reveal glow" data-page-node-id="EkKifipNgNYCguyz6WqWvc">
+      <div class="sec-h2" data-page-node-id="L79RdG0X9GLbHvYCjH8dp3"><span class="num" data-page-node-id="GRlDM9Edzw7JRTHBNRr6BS">6</span>联系我</div>
+      <p style="color:var(--ink-2); font-size:13px; margin-bottom:14px" data-page-node-id="AcPthjqxrGEXBqW8CfB0ay">
+        欢迎交流小红书运营 / 投放 / 数据相关话题。
+      </p>
+      <div class="contact-grid" data-page-node-id="VTi0GRmqC8vwwcjuOrlpeY">
+        <a class="contact-card" href="mailto:840425057@qq.com" data-page-node-id="tnoEBot6HxPee7xnln2YWz">
+          <div class="c-ico" data-page-node-id="embhHZaBv6PWA3b6wiBvOh">✉️</div>
+          <div data-page-node-id="tb3sm8h03zXbsoxON4W1Dk"><div class="c-label" data-page-node-id="6hFYrYowIVv2T3gnnXNzxN">邮箱</div><div class="c-val" data-page-node-id="uBZqpCtsGtU7CE5Kuj87Oo">840425057@qq.com</div></div>
+        </a>
+        <a class="contact-card" href="tel:15172850997" data-page-node-id="T9RX8SeGxmaAdx6UAtNRBh">
+          <div class="c-ico" data-page-node-id="Y89kChQGEarKC0BM4uvBUK">📱</div>
+          <div data-page-node-id="eJV58kNqODyGWHh5FdzhuY"><div class="c-label" data-page-node-id="1gvRUG6vnBtTc83InCAyf8">电话</div><div class="c-val" data-page-node-id="D8nPipZOzeG16aWYIDV3c8">151-7285-0997</div></div>
+        </a>
+        <div class="contact-card" data-page-node-id="UXGbhV6vMDiaYARqKvCuFV">
+          <div class="c-ico" data-page-node-id="fmW5ERwBj1vrDpImNWmCRq">📕</div>
+          <div data-page-node-id="jJPoEetf8bYHSAUBSIPg7l"><div class="c-label" data-page-node-id="qGpiBiXm8nQRc1q5t3Sbag">小红书</div><div class="c-val" data-page-node-id="V3uFzgvj15jC4ToJ4teNPB">个人账号 · 赞藏 2.3W+</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-card quote reveal" style="text-align:center" data-page-node-id="fEyoxSh8cF7DC5llQ1BuUH">
+      <p style="color:var(--ink-2); font-size:13px" data-page-node-id="aMvBIz5ZVskuUsxgWuDVal">— 感谢浏览，期待与你交流 —</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  /* ============== 滚动揭示 ============== */
+  (function(){
+    var sel = ".hero-card, .hero-stat, .idx-card, .doc-card, .proj-card, .tl-item, .skill, .value-item, .contact-card";
+    var els = document.querySelectorAll(sel);
+    if(!("IntersectionObserver" in window)){
+      els.forEach(function(e){e.classList.add("in")});
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var i = Array.prototype.indexOf.call(els, en.target);
+          setTimeout(function(){ en.target.classList.add("in"); }, (i%8)*60);
+          io.unobserve(en.target);
+        }
+      });
+    },{threshold:0, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(e){ io.observe(e) });
+  })();
+
+  /* ============== 数字 Count-up ============== */
+  (function(){
+    var counters = document.querySelectorAll("[data-count]");
+    if(!counters.length) return;
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          animateCount(en.target);
+          io2.unobserve(en.target);
+        }
+      });
+    },{threshold:0.5});
+    counters.forEach(function(c){ io2.observe(c) });
+
+    function animateCount(el){
+      var target = parseFloat(el.getAttribute("data-count"));
+      var suffix = el.getAttribute("data-suffix") || "";
+      var dur = 1100, start = performance.now();
+      function ease(t){ return 1 - Math.pow(1 - t, 3); }
+      function step(now){
+        var p = Math.min(1, (now - start)/dur);
+        var v = target * ease(p);
+        var txt = (Number.isInteger(target) ? Math.round(v) : v.toFixed(1)) + suffix;
+        el.textContent = txt;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+  })();
+
+  /* ============== Hero 副标题打字机 ============== */
+  (function(){
+    var el = document.getElementById("heroRole");
+    if(!el) return;
+    var txt = el.getAttribute("data-text") || el.textContent;
+    el.textContent = "";
+    var i = 0;
+    (function type(){
+      if(i <= txt.length){
+        el.textContent = txt.slice(0, i);
+        var caret = document.createElement("span");
+        caret.style.cssText = "display:inline-block;width:2px;height:1em;background:#7c3aed;margin-left:1px;vertical-align:text-bottom;animation:twBlink 1s steps(2) infinite";
+        if(el.lastChild && el.lastChild.nodeType===1) el.removeChild(el.lastChild);
+        if(i < txt.length){ el.appendChild(caret); }
+        i++; setTimeout(type, 60);
+      }
+    })();
+    var css = document.createElement("style");
+    css.textContent = "@keyframes twBlink{47.06%{opacity:0}}";
+    document.head.appendChild(css);
+  })();
+
+  /* ============== 统一跟随光圈:工作经历/项目经历/联系我 三卡完全一致 ============== */
+
+
+
+  /* ============== 侧栏导航高亮当前项 ============== */
+  (function(){
+    var navLinks = document.querySelectorAll(".nav-list li>a");
+    var sections = ["sec-about","sec-education","sec-work","sec-project","sec-skills","sec-dashboard","sec-contact"];
+    var secMap = {};
+    sections.forEach(function(id){ secMap[id] = document.getElementById(id); });
+    window.addEventListener("scroll", function(){
+      var top = window.scrollY + 80;
+      var cur = "sec-about";
+      sections.forEach(function(id){
+        var s = secMap[id]; if(s && s.offsetTop <= top) cur = id;
+      });
+      navLinks.forEach(function(a){
+        if(a.getAttribute("href") === "#" + cur) a.classList.add("active");
+        else a.classList.remove("active");
+      });
+    }, {passive:true});
+  })();
+
+  /* ============== 预览卡片：点击打开完整页面（箭头/滑块除外） ============== */
+  document.querySelectorAll("[data-open]").forEach(function(card){
+    card.addEventListener("click", function(e){
+      if(e.target.closest(".sov-scrollbar")) return;   // 点箭头/滑块只滑动，不打开
+      var live = card.getAttribute("data-live-url");
+      var target = live ? live : card.getAttribute("data-open");
+      window.open(target, "_blank");
+    });
+  });
+
+  /* ============== 预览卡片：外部箭头滑动浏览（SOV 看板 + 智能助手） ============== */
+  function initPreviewScroll(opts){
+    var demo = document.getElementById(opts.demo);
+    var scroll = document.getElementById(opts.scroll);
+    var thumb = document.getElementById(opts.thumb);
+    var up = document.getElementById(opts.up);
+    var down = document.getElementById(opts.down);
+    if(!demo || !scroll || !thumb) return;
+    var SCALE = opts.scale, CONT_H = opts.contH, FRAME_H = opts.frameH;
+    var viewH = FRAME_H * SCALE;
+    var maxT = Math.min(0, CONT_H - viewH);   // 负数：可下滚最大距离
+    var pos = 0;
+    function clamp(v){ return Math.max(maxT, Math.min(0, v)); }
+    function render(){
+      scroll.style.transform = "translateY(" + pos + "px)";
+      var ratio = maxT === 0 ? 0 : pos / maxT;       // 0=顶 1=底
+      var trackH = 120, th = 26;
+      thumb.style.top = (ratio * (trackH - th)) + "px";
+    }
+    function step(d){ pos = clamp(pos + d); render(); }
+    up.addEventListener("click", function(e){ e.stopPropagation(); step(60); });
+    down.addEventListener("click", function(e){ e.stopPropagation(); step(-60); });
+    function hold(btn, d){
+      var t;
+      btn.addEventListener("mousedown", function(e){ e.stopPropagation(); step(d); t = setInterval(function(){ step(d); }, 220); });
+      ["mouseup","mouseleave"].forEach(function(ev){ btn.addEventListener(ev, function(){ clearInterval(t); }); });
+    }
+    hold(up, 60); hold(down, -60);
+    demo.addEventListener("wheel", function(e){ e.preventDefault(); step(-e.deltaY); }, { passive:false });
+    var dragging = false;
+    var trackEl = thumb.parentElement;
+    thumb.addEventListener("mousedown", function(e){
+      e.stopPropagation(); dragging = true;
+      document.body.style.userSelect = "none";
+    });
+    document.addEventListener("mousemove", function(e){
+      if(!dragging) return;
+      var rect = trackEl.getBoundingClientRect();
+      var ratio = (e.clientY - rect.top - 13) / (rect.height - 26);
+      ratio = Math.max(0, Math.min(1, ratio));
+      pos = maxT * ratio; render();
+    });
+    document.addEventListener("mouseup", function(){ dragging = false; document.body.style.userSelect = ""; });
+    trackEl.addEventListener("click", function(e){
+      e.stopPropagation();
+      if(e.target === thumb) return;
+      var rect = trackEl.getBoundingClientRect();
+      var ratio = (e.clientY - rect.top) / rect.height;
+      ratio = Math.max(0, Math.min(1, ratio));
+      pos = maxT * ratio; render();
+    });
+    render();
+  }
+  /* ===== LIVE 地址一处配置 =====
+     想让「所有人」都能看到 LIVE:
+     ① 局域网: 前端 npm run dev --host,填 http://<你的局域网IP>:5173
+     ② 内网穿透: 填 cpolar/ngrok 给的公网域名
+     ③ 云服务器: 填 https://你的域名  */
+
+  /* 旅行助手使用演示:模块① 默认指向静态演示页（线上/离线都能打开）；
+     只有当本地 5173 前端确实在运行时，才切换到 LIVE 真机演示。 */
+  var LIVE_URL = "http://localhost:5173/";
+  var DEMO_URL = "行程演示_杭州.html";
+  var asstStep1 = document.getElementById("asstStep1");
+  if (asstStep1) {
+    asstStep1.href = encodeURI(DEMO_URL);
+    /* 仅当页面本身是 http（本地 / 局域网）时才探测本机 dev 服务；
+       https 线上站直接保持静态演示页，避免 mixed-content 探测报错。 */
+    if (location.protocol === "http:") {
+      fetch(LIVE_URL, { mode: "no-cors" })
+        .then(function(){ asstStep1.href = LIVE_URL; })
+        .catch(function(){});
+    }
+  }
+
+  /* ============== 助手服务可达性探测（8000 / 8003 双端口，真实对话优先，静态预览兜底） ============== */
+  (function(){
+    var card = document.querySelector("[data-live]");
+    if(!card) return;
+    var done = false;
+    var urls = [card.getAttribute("data-live"), card.getAttribute("data-live2")].filter(Boolean);
+    function mark(url){
+      if(done) return; done = true;
+      if(url){
+        card.setAttribute("data-live-url", url);
+        var badge = card.querySelector(".sov-badge");
+        if(badge){ badge.textContent = "● LIVE 已连接"; badge.style.background = "#dcfce7"; badge.style.color = "#0f9d7c"; }
+      }
+    }
+    var pending = urls.length;
+    urls.forEach(function(u){
+      fetch(u + "api/limits", { mode:"no-cors" })
+        .then(function(){ mark(u); })
+        .catch(function(){ if(--pending === 0) mark(null); });
+    });
+    setTimeout(function(){ mark(null); }, 2500);
+  })();
+</script>
+
+<!-- ===================== AI 助手 · RAG + ReAct Agent ===================== -->
+<style>
+  .ai-fab{
+    position:fixed; right:26px; bottom:26px; z-index:9000;
+    width:58px; height:58px; border-radius:50%; border:none; cursor:pointer;
+    background:linear-gradient(135deg,#7c3aed,#3b82f6); color:#fff;
+    box-shadow:0 8px 24px rgb(124 58 237 / .35);
+    display:none; align-items:center; justify-content:center;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .ai-fab.show{display:flex}
+  .ai-fab:hover{transform:translateY(-2px) scale(1.05); box-shadow:0 12px 32px rgb(124 58 237 / .45)}
+  .ai-fab svg{width:26px; height:26px}
+  .ai-fab .ai-dot{
+    position:absolute; top:12px; right:12px; width:8px; height:8px; border-radius:50%;
+    background:#10b981; border:2px solid #fff;
+  }
+
+  .ai-panel{
+    position:fixed; right:26px; bottom:96px; z-index:9001;
+    width:392px; max-width:calc(100vw - 32px); height:576px; max-height:calc(100vh - 130px);
+    background:#fff; border:1px solid var(--line,#ece9f2); border-radius:18px;
+    box-shadow:0 20px 60px rgb(31 34 48 / .18); display:none; flex-direction:column; overflow:hidden;
+  }
+  .ai-panel.show{display:flex; animation:aiIn .22s ease}
+  @keyframes aiIn{from{opacity:0; transform:translateY(12px) scale(.98)} to{opacity:1; transform:none}}
+
+  .ai-head{
+    padding:14px 16px; border-bottom:1px solid var(--line-soft,#f3eff8);
+    background:linear-gradient(135deg, #faf7ff, #f2f7ff);
+    display:flex; align-items:center; justify-content:space-between; gap:10px; flex:none;
+  }
+  .ai-title{font-size:15px; font-weight:700; color:#1f2230; display:flex; align-items:center; gap:7px}
+  .ai-title .ai-badge{
+    font-size:10px; font-weight:600; padding:2px 7px; border-radius:999px;
+    background:#ede9fe; color:#7c3aed; letter-spacing:.3px;
+  }
+  .ai-sub{font-size:11.5px; color:var(--muted,#8a8fa3); margin-top:3px}
+  .ai-close{
+    border:none; background:transparent; font-size:22px; line-height:1; cursor:pointer;
+    color:var(--muted,#8a8fa3); padding:0 4px;
+  }
+  .ai-close:hover{color:#1f2230}
+
+  .ai-body{flex:1; overflow-y:auto; padding:14px 16px; display:flex; flex-direction:column; gap:12px}
+  .ai-msg{max-width:88%; padding:9px 13px; border-radius:14px; font-size:13px; line-height:1.75; white-space:pre-wrap; word-break:break-word}
+  .ai-msg.user{align-self:flex-end; background:linear-gradient(135deg,#7c3aed,#6d5ef0); color:#fff; border-bottom-right-radius:5px}
+  .ai-msg.bot{align-self:flex-start; background:#f7f6fb; color:#2a2e42; border-bottom-left-radius:5px; max-width:94%}
+  .ai-msg.sys{align-self:center; background:#fff; border:1px dashed var(--line,#ece9f2); color:var(--muted,#8a8fa3); font-size:11.5px; max-width:100%; text-align:center}
+
+  .ai-trace{
+    margin:0 0 8px; border:1px solid var(--line-soft,#f3eff8); border-radius:10px;
+    background:#fcfcfe; overflow:hidden; font-size:12px;
+  }
+  .ai-trace-hd{
+    padding:6px 10px; cursor:pointer; color:var(--muted,#8a8fa3); font-size:11.5px;
+    display:flex; align-items:center; justify-content:space-between; user-select:none;
+  }
+  .ai-trace-hd:hover{background:#f7f6fb}
+  .ai-trace-bd{display:none; padding:2px 10px 8px; border-top:1px dashed var(--line-soft,#f3eff8)}
+  .ai-trace.open .ai-trace-bd{display:block}
+  .ai-step{padding:5px 0; display:flex; gap:7px; align-items:flex-start; color:#4a4f63; line-height:1.6}
+  .ai-step .k{flex:none; font-size:11px; padding:1px 6px; border-radius:5px; background:#eef4ff; color:#3b82f6; font-weight:600}
+  .ai-step.act .k{background:#f5edff; color:#7c3aed}
+  .ai-step.obs .k{background:#eef7ee; color:#10b981}
+  .ai-step code{background:#f3eff8; padding:1px 5px; border-radius:4px; font-size:11px; color:#7c3aed}
+
+  .ai-srcs{margin-top:8px; padding-top:8px; border-top:1px dashed var(--line,#ece9f2); display:flex; flex-wrap:wrap; gap:5px; align-items:center}
+  .ai-srcs .lb{font-size:10.5px; color:var(--muted,#8a8fa3); margin-right:2px}
+  .ai-src{font-size:10.5px; padding:2px 8px; border-radius:999px; background:#ede9fe; color:#7c3aed; cursor:default}
+
+  .ai-quick{flex:none; padding:0 16px 10px; display:flex; gap:6px; flex-wrap:wrap}
+  .ai-chip{
+    font-size:11.5px; padding:5px 11px; border-radius:999px; cursor:pointer;
+    border:1px solid var(--line,#ece9f2); background:#fff; color:#4a4f63; transition:all .15s ease;
+  }
+  .ai-chip:hover{border-color:#7c3aed; color:#7c3aed; background:#faf7ff}
+
+  .ai-input{flex:none; display:flex; gap:8px; padding:10px 14px 14px; border-top:1px solid var(--line-soft,#f3eff8)}
+  .ai-input input{
+    flex:1; min-width:0; font-size:13px; padding:9px 13px; border-radius:10px;
+    border:1px solid var(--line,#ece9f2); outline:none; font-family:inherit; background:#fcfcfe;
+  }
+  .ai-input input:focus{border-color:#7c3aed; background:#fff}
+  .ai-input button{
+    flex:none; padding:9px 16px; border-radius:10px; border:none; cursor:pointer;
+    background:linear-gradient(135deg,#7c3aed,#3b82f6); color:#fff; font-size:13px; font-weight:600;
+  }
+  .ai-input button:disabled{opacity:.5; cursor:not-allowed}
+
+  .ai-typing{display:inline-flex; gap:3px; align-items:center; padding:2px 0}
+  .ai-typing i{width:5px; height:5px; border-radius:50%; background:#a78bfa; animation:aiBlink 1.1s infinite}
+  .ai-typing i:nth-child(2){animation-delay:.18s} .ai-typing i:nth-child(3){animation-delay:.36s}
+  @keyframes aiBlink{0%,60%,100%{opacity:.25; transform:translateY(0)} 30%{opacity:1; transform:translateY(-3px)}}
+
+  @media (max-width:640px){
+    .ai-panel{right:8px; left:8px; bottom:88px; width:auto; max-width:none; height:70vh}
+    .ai-fab{right:16px; bottom:16px}
+  }
+</style>
+
+<button class="ai-fab" id="aiFab" title="向 AI 助手提问" aria-label="打开 AI 助手">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="8" width="16" height="12" rx="3"></rect>
+    <path d="M12 8V4"></path><circle cx="12" cy="3" r="1.4" fill="currentColor" stroke="none"></circle>
+    <circle cx="9" cy="13.5" r="1.2" fill="currentColor" stroke="none"></circle>
+    <circle cx="15" cy="13.5" r="1.2" fill="currentColor" stroke="none"></circle>
+    <path d="M2 13v3M22 13v3"></path>
+  </svg>
+</button>
+
+<div class="ai-panel" id="aiPanel" role="dialog" aria-label="AI 助手">
+  <div class="ai-head">
+    <div>
+      <div class="ai-title">AI 助手 <span class="ai-badge">RAG + ReAct</span></div>
+      <div class="ai-sub">答案均来自本页简历原文，可展开查看推理过程</div>
+    </div>
+    <button class="ai-close" id="aiClose" aria-label="关闭">×</button>
+  </div>
+  <div class="ai-body" id="aiBody"></div>
+  <div class="ai-quick" id="aiQuick"></div>
+  <div class="ai-input">
+    <input id="aiInput" placeholder="问问 ta 的经历、项目、数据…" autocomplete="off">
+    <button id="aiSend">发送</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  // 仅在 http(s) 环境启用（本地 file:// 直接打开时无后端服务，不显示入口）
+  if(location.protocol !== "http:" && location.protocol !== "https:") return;
+
+  var fab   = document.getElementById("aiFab");
+  var panel = document.getElementById("aiPanel");
+  var body  = document.getElementById("aiBody");
+  var input = document.getElementById("aiInput");
+  var send  = document.getElementById("aiSend");
+  var close = document.getElementById("aiClose");
+  var quick = document.getElementById("aiQuick");
+  var busy  = false;
+
+  var SUGGEST = ["她做过哪些 AI 相关的事？","有哪些亮眼的数据成果？","工作经历是怎样的？","介绍一下项目经历","怎么联系她？"];
+
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+
+  function bubble(cls, html){
+    var d = document.createElement("div");
+    d.className = "ai-msg " + cls;
+    d.innerHTML = html;
+    body.appendChild(d);
+    body.scrollTop = body.scrollHeight;
+    return d;
+  }
+
+  var STEP_LABEL = { thought:"思考", action:"调用工具", observation:"观察", answer:"作答" };
+  var STEP_ICON  = { thought:"🧠", action:"🔧", observation:"👁", answer:"✅" };
+
+  function renderTrace(trace){
+    var wrap = document.createElement("div");
+    wrap.className = "ai-trace";
+    var steps = trace.filter(function(t){ return t.type !== "answer"; });
+    var hd = '<div class="ai-trace-hd"><span>🧩 推理过程 · ReAct ' + steps.length + ' 步</span><span>展开 ▾</span></div>';
+    var bd = '<div class="ai-trace-bd">';
+    steps.forEach(function(t){
+      var txt = t.text || ("调用 " + (t.args && t.args.tool ? t.args.tool : ""));
+      if(t.type === "action" && t.args){
+        var a = t.args;
+        txt = "调用工具 <code>" + esc(a.tool) + "</code>" +
+              (a.query ? "，query = “" + esc(a.query) + "”" : "") +
+              (a.type ? "，type = " + esc(a.type) : "");
+      }
+      bd += '<div class="ai-step ' + (t.type==="action"?"act":t.type==="observation"?"obs":"") + '">' +
+            '<span class="k">' + (STEP_ICON[t.type]||"·") + " " + (STEP_LABEL[t.type]||t.type) + '</span>' +
+            '<span>' + esc(txt) + '</span></div>';
+    });
+    bd += '</div>';
+    wrap.innerHTML = hd + bd;
+    wrap.querySelector(".ai-trace-hd").addEventListener("click", function(){
+      wrap.classList.toggle("open");
+      this.querySelector("span:last-child").textContent = wrap.classList.contains("open") ? "收起 ▴" : "展开 ▾";
+    });
+    return wrap;
+  }
+
+  function renderSources(srcs){
+    if(!srcs || !srcs.length) return null;
+    var d = document.createElement("div");
+    d.className = "ai-srcs";
+    var h = '<span class="lb">来源</span>';
+    srcs.forEach(function(s){ h += '<span class="ai-src" title="相关度 ' + s.score + '">' + esc(s.title || s.id) + '</span>'; });
+    d.innerHTML = h;
+    return d;
+  }
+
+  function ask(q){
+    if(busy || !q.trim()) return;
+    busy = true; send.disabled = true;
+    bubble("user", esc(q));
+    input.value = "";
+
+    var wait = bubble("bot", '<span class="ai-typing"><i></i><i></i><i></i></span> 检索简历知识库…');
+
+    fetch("/api/chat", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({question:q})
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      wait.remove();
+      if(data.error){ bubble("bot", "服务开小差了：" + esc(data.error)); return; }
+
+      var box = bubble("bot", "");
+      if(data.trace) box.appendChild(renderTrace(data.trace));
+
+      var a = document.createElement("div");
+      a.textContent = data.answer || "";
+      box.appendChild(a);
+
+      var s = renderSources(data.sources);
+      if(s) box.appendChild(s);
+
+      body.scrollTop = body.scrollHeight;
+    })
+    .catch(function(){
+      wait.remove();
+      bubble("bot", "暂时连不上 AI 助手（后端未启动）。其余内容可正常浏览。");
+    })
+    .then(function(){ busy = false; send.disabled = false; input.focus(); });
+  }
+
+  // 事件绑定
+  fab.addEventListener("click", function(){
+    panel.classList.toggle("show");
+    if(panel.classList.contains("show")){
+      if(!body.dataset.init){
+        body.dataset.init = "1";
+        bubble("sys", "你可以直接提问，答案只会来自本页简历内容");
+        bubble("bot", "你好 👋 我是这份简历的 AI 助手。\n想了解 ta 的经历、项目或数据成果，直接问就行。");
+        quick.innerHTML = "";
+        SUGGEST.forEach(function(s){
+          var c = document.createElement("button");
+          c.className = "ai-chip"; c.type = "button"; c.textContent = s;
+          c.addEventListener("click", function(){ ask(s); });
+          quick.appendChild(c);
+        });
+      }
+      setTimeout(function(){ input.focus(); }, 60);
+    }
+  });
+  close.addEventListener("click", function(){ panel.classList.remove("show"); });
+  send.addEventListener("click", function(){ ask(input.value); });
+  input.addEventListener("keydown", function(e){ if(e.key === "Enter"){ e.preventDefault(); ask(input.value); } });
+
+  // 健康检查通过才显示入口
+  fetch("/api/health", {cache:"no-store"})
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){ if(d && d.ok) fab.classList.add("show"); })
+    .catch(function(){});
+})();
+</script>
+
+</body>
+</html>

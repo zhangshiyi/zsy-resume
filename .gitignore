@@ -1,0 +1,8 @@
+.DS_Store
+*.zip
+*.bak
+*.bak-*
+*.backup-*
+__pycache__/
+*.pyc
+.env

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杭州 · 2 天行程结果演示</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f4f7fb; color: #1f2937; line-height: 1.7; padding: 26px 14px; }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  .topbar { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: #fff; border-radius: 16px; padding: 22px 26px; margin-bottom: 18px; }
+  .topbar h1 { font-size: 21px; }
+  .topbar p { opacity: .9; font-size: 13px; margin-top: 4px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+  @media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } }
+  .card { background: #fff; border-radius: 14px; padding: 18px 20px; box-shadow: 0 1px 4px rgba(15,23,42,.08); }
+  .card h3 { font-size: 14px; margin-bottom: 8px; color: #312e81; }
+  .tag { display: inline-block; background: #eef2ff; color: #4f46e5; border-radius: 999px; padding: 3px 12px; font-size: 12px; font-weight: 600; margin-right: 6px; margin-top: 4px; }
+  .tips { background: #f8faff; border: 1px solid #e0e7ff; border-radius: 12px; padding: 12px 14px; font-size: 13px; color: #475569; }
+  .mapbox { background: #fff; border-radius: 14px; padding: 14px; box-shadow: 0 1px 4px rgba(15,23,42,.08); margin-bottom: 16px; }
+  .legend { font-size: 12px; color: #64748b; margin-top: 6px; }
+  footer { text-align: center; color: #94a3b8; font-size: 12px; margin-top: 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <h1>✈️ 杭州 · 2 天行程规划</h1>
+    <p>2026-08-26 → 2026-08-27 ｜ 多智能体规划 · 官方前端结果页同款演示</p>
+  </div>
+
+  
+    <div style="background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;border-radius:14px;padding:16px 20px;margin-bottom:16px;box-shadow:0 10px 24px -10px rgba(99,102,241,.5)">
+      <div style="font-size:12px;opacity:.85;letter-spacing:1px">预算参考</div>
+      <div style="font-size:22px;font-weight:800;margin-top:2px">¥ 600</div>
+    </div>
+
+  <div class="grid2">
+    <div class="card"><h3>🗺️ 行程地图(示意)</h3>
+      <svg viewBox="0 0 400 260" style="width:100%;background:#f8faff;border-radius:10px">
+        <rect width="400" height="260" fill="#f8faff" rx="10"/>
+        <polyline points="378.5,56.4 378.7,55.4 378.2,55.8 20.0,240.0 372.4,55.4 379.0,55.2 378.8,56.1 317.7,40.0 380.0,55.5" fill="none" stroke="#6366f1" stroke-width="2" stroke-dasharray="5,4" opacity=".7"/><circle cx="378.5" cy="56.4" r="7" fill="#7c3aed" stroke="#fff" stroke-width="2"/><text x="378.5" y="59.4" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">A</text><circle cx="378.7" cy="55.4" r="7" fill="#7c3aed" stroke="#fff" stroke-width="2"/><text x="378.7" y="58.4" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">B</text><circle cx="378.2" cy="55.8" r="7" fill="#7c3aed" stroke="#fff" stroke-width="2"/><text x="378.2" y="58.8" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">C</text><circle cx="20.0" cy="240.0" r="7" fill="#7c3aed" stroke="#fff" stroke-width="2"/><text x="20.0" y="243.0" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">D</text><circle cx="372.4" cy="55.4" r="7" fill="#7c3aed" stroke="#fff" stroke-width="2"/><text x="372.4" y="58.4" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">E</text><circle cx="379.0" cy="55.2" r="7" fill="#7c3aed" stroke="#fff" stroke-width="2"/><text x="379.0" y="58.2" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">F</text><circle cx="378.8" cy="56.1" r="7" fill="#7c3aed" stroke="#fff" stroke-width="2"/><text x="378.8" y="59.1" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">G</text><circle cx="317.7" cy="40.0" r="7" fill="#7c3aed" stroke="#fff" stroke-width="2"/><text x="317.7" y="43.0" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">H</text><circle cx="380.0" cy="55.5" r="7" fill="#7c3aed" stroke="#fff" stroke-width="2"/><text x="380.0" y="58.5" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">I</text>
+      </svg>
+      <div class="legend">按真实经纬度投影 · 字母 = 行程中的景点顺序</div>
+    </div>
+    <div class="card"><h3>💡 规划建议</h3><div class="tips">1. 行程整体宽松，符合「不要太赶」的要求，每天景点控制在2-3个，预留充足休息时间。2. 杭州地铁4号线、7号线覆盖大部分景点和美食区域，建议购买杭州公共交通卡或使用支付宝/微信乘车码。3. 雨具、防晒霜、充足饮水三件必带。4. 7-8月为杭州高温旺季，灵隐寺和西湖周边建议尽量安排在上午或傍晚。5. 美食打卡集中在钱江新城来福士中心一带，可一天集中扫店。6. 经济型酒店建议选在地铁沿线（如1号线、4号线），出行更省时。</div>
+      <div style="margin-top:12px">
+        <span class="tag">多智能体</span><span class="tag">MCP</span><span class="tag">RAG</span><span class="tag">高德地图</span>
+      </div>
+    </div>
+  </div>
+
+  
+    <div style="background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(15,23,42,.08);overflow:hidden;margin-bottom:16px">
+      <div style="background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;padding:12px 18px;font-weight:700;font-size:15px">第1天 · 西湖人文漫步与美食体验</div>
+      <div style="padding:16px 18px">
+        <div style="font-size:13px;color:#475569;margin-bottom:10px">🗓️ 2026-08-26 ｜ 交通:公共交通 ｜ 住宿:经济型酒店</div>
+        <div style="font-weight:700;font-size:13px;color:#312e81;margin:8px 0 6px">📍 景点安排</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;padding:10px 12px"><b style="color:#312e81">杭州西湖风景名胜区</b><div style="color:#64748b;font-size:12px;margin-top:2px">西湖街道龙井路1号</div></div><div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;padding:10px 12px"><b style="color:#312e81">苏堤</b><div style="color:#64748b;font-size:12px;margin-top:2px">西湖区</div></div><div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;padding:10px 12px"><b style="color:#312e81">灵隐寺</b><div style="color:#64748b;font-size:12px;margin-top:2px">法云弄1号</div></div><div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;padding:10px 12px"><b style="color:#312e81">龙井村</b><div style="color:#64748b;font-size:12px;margin-top:2px">云南省德宏傣族景颇族自治州芒市龙井村</div></div><div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;padding:10px 12px"><b style="color:#312e81">杭州·青山湖景区音乐公园</b><div style="color:#64748b;font-size:12px;margin-top:2px">科技大道与园区路交叉口南200米</div></div></div>
+        <div style="font-weight:700;font-size:13px;color:#312e81;margin:12px 0 6px">🍜 餐饮安排</div>
+        <div style="display:flex;gap:8px;padding:5px 0;border-bottom:1px dashed #eef2f7;font-size:13px"><span style="color:#7c3aed;font-weight:700;min-width:34px">早餐</span><span>酒店附近小吃店（片儿川或葱包桧）</span></div><div style="display:flex;gap:8px;padding:5px 0;border-bottom:1px dashed #eef2f7;font-size:13px"><span style="color:#7c3aed;font-weight:700;min-width:34px">午餐</span><span>楼外楼（孤山路店）</span></div><div style="display:flex;gap:8px;padding:5px 0;border-bottom:1px dashed #eef2f7;font-size:13px"><span style="color:#7c3aed;font-weight:700;min-width:34px">晚餐</span><span>7017浙菜·建德味（钱江新城店）</span></div>
+      </div>
+    </div>
+    <div style="background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(15,23,42,.08);overflow:hidden;margin-bottom:16px">
+      <div style="background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;padding:12px 18px;font-weight:700;font-size:15px">第2天 · 灵隐禅意与日料美食收官</div>
+      <div style="padding:16px 18px">
+        <div style="font-size:13px;color:#475569;margin-bottom:10px">🗓️ 2026-08-27 ｜ 交通:公共交通 ｜ 住宿:经济型酒店</div>
+        <div style="font-weight:700;font-size:13px;color:#312e81;margin:8px 0 6px">📍 景点安排</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;padding:10px 12px"><b style="color:#312e81">杭州西湖风景名胜区-断桥残雪</b><div style="color:#64748b;font-size:12px;margin-top:2px">龙井路1号杭州西湖风景名胜区内(东北角)</div></div><div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;padding:10px 12px"><b style="color:#312e81">杭州西湖风景名胜区-花港观鱼</b><div style="color:#64748b;font-size:12px;margin-top:2px">西湖街道西山路5-1号</div></div><div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;padding:10px 12px"><b style="color:#312e81">飞来峰</b><div style="color:#64748b;font-size:12px;margin-top:2px">安徽省安庆市潜山市飞来峰</div></div><div style="background:#f8faff;border:1px solid #e0e7ff;border-radius:10px;padding:10px 12px"><b style="color:#312e81">凯德·杭州来福士中心</b><div style="color:#64748b;font-size:12px;margin-top:2px">富春路与丹桂街交叉口西160米</div></div></div>
+        <div style="font-weight:700;font-size:13px;color:#312e81;margin:12px 0 6px">🍜 餐饮安排</div>
+        <div style="display:flex;gap:8px;padding:5px 0;border-bottom:1px dashed #eef2f7;font-size:13px"><span style="color:#7c3aed;font-weight:700;min-width:34px">早餐</span><span>酒店早餐或知味观（仁和路总店）</span></div><div style="display:flex;gap:8px;padding:5px 0;border-bottom:1px dashed #eef2f7;font-size:13px"><span style="color:#7c3aed;font-weight:700;min-width:34px">午餐</span><span>灵隐附近素食餐厅</span></div><div style="display:flex;gap:8px;padding:5px 0;border-bottom:1px dashed #eef2f7;font-size:13px"><span style="color:#7c3aed;font-weight:700;min-width:34px">晚餐</span><span>極上萬膳·日料放题（来福士店）</span></div>
+      </div>
+    </div>
+
+  <footer>由官方 1:1 复刻的智能旅行助手真实生成(杭州 2 天 · 备注"不要太赶")</footer>
+</div>
+</body>
+</html>
